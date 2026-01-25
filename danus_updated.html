@@ -1,0 +1,650 @@
+<!DOCTYPE html>
+<html lang="id">
+<!-- Bootstrap 5.3.3 CSS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<!-- Bootstrap Icons -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+
+<style>
+  /* ========== NAVBAR STYLING ========== */
+  .navbar-custom {
+    background-color: #ffffff;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    padding: 0.8rem 0;
+    border-bottom: 1px solid #e8e8e8;
+  }
+
+  .navbar-custom .navbar-brand {
+    font-weight: 700;
+    font-size: 1.2rem;
+    color: #1f73e6 !important;
+    margin-right: 2rem;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    letter-spacing: 0.5px;
+  }
+
+  .navbar-custom .navbar-brand:hover {
+    opacity: 0.8;
+  }
+
+  .navbar-custom .navbar-brand i {
+    font-size: 1.5rem;
+  }
+
+  .navbar-custom .nav-link {
+    color: #5f6368 !important;
+    font-weight: 500;
+    font-size: 0.95rem;
+    padding: 0.5rem 1rem !important;
+    margin: 0 2px;
+    border-radius: 4px;
+    transition: all 0.2s ease;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+
+  .navbar-custom .nav-link:hover {
+    background-color: #f8f9fa;
+    color: #1f73e6 !important;
+  }
+
+  .navbar-custom .dropdown-toggle::after {
+    content: '\f078';
+    font-family: 'bootstrap-icons';
+    font-size: 0.75rem;
+    border: none;
+    margin-left: 4px;
+  }
+
+  .navbar-custom .dropdown-menu {
+    background-color: #ffffff;
+    border: 1px solid #e8e8e8;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 6px;
+    margin-top: 6px;
+    min-width: 220px;
+  }
+
+  .navbar-custom .dropdown-item {
+    color: #5f6368;
+    font-weight: 500;
+    font-size: 0.9rem;
+    padding: 0.6rem 1.2rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: all 0.2s ease;
+  }
+
+  .navbar-custom .dropdown-item:hover {
+    background-color: #f8f9fa;
+    color: #1f73e6;
+  }
+
+  .navbar-toggler {
+    border: none;
+    padding: 0.25rem 0.5rem;
+  }
+
+  .navbar-toggler:focus {
+    outline: none;
+    box-shadow: none;
+  }
+
+  @media (max-width: 991px) {
+    .navbar-custom .navbar-brand {
+      margin-right: 1rem;
+    }
+
+    .navbar-custom .nav-link {
+      padding: 0.6rem 0.5rem !important;
+      margin: 0.3rem 0;
+    }
+
+    .navbar-collapse {
+      background-color: #ffffff;
+      border-top: 1px solid #e8e8e8;
+      margin-top: 0.5rem;
+      padding: 0.5rem 0;
+    }
+  }
+</style>
+
+<!-- ========== NAVBAR HTML ========== -->
+<nav class="navbar navbar-expand-lg navbar-custom">
+  <div class="container-fluid px-3 px-md-5">
+    <!-- Logo / Brand -->
+    <a class="navbar-brand" href="index.html">
+      <i class="bi bi-hospital"></i>
+      <span>HMJ KEDOKTERAN</span>
+    </a>
+
+    <!-- Hamburger Menu (Mobile) -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Navbar Menu -->
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <!-- Menu: Beranda -->
+        <li class="nav-item">
+          <a class="nav-link" href="index.html">
+            <i class="bi bi-house-door-fill"></i>
+            <span>Beranda</span>
+          </a>
+        </li>
+
+        <!-- Dropdown: Departemen -->
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="departemenDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <i class="bi bi-diagram-3-fill"></i>
+            <span>Departemen</span>
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="departemenDropdown">
+            <li><a class="dropdown-item" href="admin.html"><i class="bi bi-file-earmark-text"></i> Administrasi</a></li>
+            <li><a class="dropdown-item" href="hublu.html"><i class="bi bi-globe"></i> Hubungan Luar</a></li>
+            <li><a class="dropdown-item" href="danus.html"><i class="bi bi-cash-coin"></i> Dana dan Usaha</a></li>
+            <li><a class="dropdown-item" href="jarkom.html"><i class="bi bi-share-fill"></i> Jaringan & Komunikasi</a></li>
+            <li><a class="dropdown-item" href="pmb.html"><i class="bi bi-star-fill"></i> Pengembangan Minat & Bakat</a></li>
+            <li><a class="dropdown-item" href="pengmas.html"><i class="bi bi-heart-fill"></i> Pengabdian Masyarakat</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="kastrad.html"><i class="bi bi-lightbulb"></i> Kajian Strategi & Advokasi</a></li>
+            <li><a class="dropdown-item" href="p2.html"><i class="bi bi-book-fill"></i> Pendidikan & Penelitian</a></li>
+            <li><a class="dropdown-item" href="psdm.html"><i class="bi bi-people-fill"></i> Pengembangan SDM</a></li>
+            <li><a class="dropdown-item" href="pikis.html"><i class="bi bi-brightness-high-fill"></i> Pengembangan Ilmu & Karakter Islam</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<head>
+  <meta charset="UTF-8">
+  <title>Departemen Dana dan Usaha | HMJK UINAM</title>
+
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      color: #2c3e50;
+      line-height: 1.6;
+      background-color: #f8f9fa;
+    }
+
+    /* ===== Hero Section Enhancement ===== */
+    .hero-department {
+      background: linear-gradient(135deg, #1f73e6 0%, #2980b9 100%);
+      color: white;
+      padding: 80px 0;
+      position: relative;
+      overflow: hidden;
+      animation: fadeInDown 0.8s ease-out;
+    }
+
+    .hero-department::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-image: 
+        radial-gradient(circle at 20% 50%, rgba(255,255,255,0.1) 0%, transparent 50%),
+        radial-gradient(circle at 80% 80%, rgba(255,255,255,0.1) 0%, transparent 50%);
+      pointer-events: none;
+    }
+
+    .hero-department h1 {
+      font-size: clamp(2rem, 6vw, 3.5rem);
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-shadow: 2px 2px 8px rgba(0,0,0,0.2);
+      animation: slideInUp 0.8s ease-out 0.2s both;
+      position: relative;
+      z-index: 1;
+    }
+
+    .hero-department p {
+      font-size: 1.2rem;
+      font-weight: 300;
+      letter-spacing: 0.5px;
+      animation: slideInUp 0.8s ease-out 0.4s both;
+      position: relative;
+      z-index: 1;
+    }
+
+    /* ===== Section Styling ===== */
+    section {
+      padding: 60px 0;
+      position: relative;
+    }
+
+    section:nth-child(odd) {
+      background-color: #ffffff;
+    }
+
+    section:nth-child(even) {
+      background-color: #f8f9fa;
+    }
+
+    .section-title {
+      font-size: 2rem;
+      font-weight: 700;
+      color: #2c3e50;
+      margin-bottom: 15px;
+      position: relative;
+      display: inline-block;
+    }
+
+    .section-title::after {
+      content: '';
+      position: absolute;
+      bottom: -10px;
+      left: 0;
+      width: 100px;
+      height: 4px;
+      background: linear-gradient(90deg, #1f73e6, #2980b9);
+      border-radius: 2px;
+      animation: slideInLeft 0.6s ease-out;
+    }
+
+    .section-subtitle {
+      font-size: 1rem;
+      color: #7f8c8d;
+      margin-bottom: 30px;
+      font-weight: 300;
+    }
+
+    /* ===== Card Styling ===== */
+    .card {
+      border: none;
+      border-radius: 12px;
+      background: white;
+      transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+      overflow: hidden;
+      position: relative;
+    }
+
+    .card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+    }
+
+    .card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 4px;
+      background: linear-gradient(90deg, #1f73e6, #2980b9);
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform 0.3s ease;
+    }
+
+    .card:hover::before {
+      transform: scaleX(1);
+    }
+
+    .card-body {
+      padding: 25px;
+    }
+
+    /* ===== Grid Layout ===== */
+    .grid-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 25px;
+      margin-top: 30px;
+    }
+
+    /* ===== List Enhancement ===== */
+    .enhanced-list {
+      list-style: none;
+      margin-top: 20px;
+    }
+
+    .enhanced-list li {
+      padding: 12px 15px;
+      margin-bottom: 10px;
+      background: white;
+      border-left: 4px solid #1f73e6;
+      border-radius: 4px;
+      transition: all 0.3s ease;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.08);
+    }
+
+    .enhanced-list li:hover {
+      background: #f8f9fa;
+      border-left-color: #2980b9;
+      transform: translateX(8px);
+    }
+
+    .enhanced-list li::before {
+      content: '✓ ';
+      color: #1f73e6;
+      font-weight: bold;
+      margin-right: 8px;
+    }
+
+    /* ===== Photo Profile ===== */
+    .profile-photo {
+      width: 180px;
+      height: 180px;
+      border-radius: 50%;
+      border: 5px solid #1f73e6;
+      object-fit: cover;
+      transition: all 0.4s ease;
+      box-shadow: 0 8px 20px rgba(31, 115, 230, 0.2);
+    }
+
+    .profile-photo:hover {
+      transform: scale(1.08);
+      box-shadow: 0 12px 30px rgba(31, 115, 230, 0.3);
+    }
+
+    /* ===== Image Grid ===== */
+    .image-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      margin-top: 30px;
+    }
+
+    .image-card {
+      position: relative;
+      border-radius: 12px;
+      overflow: hidden;
+      aspect-ratio: 4/3;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      background: #e8e8e8;
+    }
+
+    .image-card img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.4s ease;
+    }
+
+    .image-card:hover img {
+      transform: scale(1.05);
+    }
+
+    .image-overlay {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: linear-gradient(to top, rgba(31, 115, 230, 0.9), transparent);
+      color: white;
+      padding: 20px;
+      transform: translateY(100%);
+      transition: transform 0.3s ease;
+    }
+
+    .image-card:hover .image-overlay {
+      transform: translateY(0);
+    }
+
+    /* ===== Animations ===== */
+    @keyframes fadeInDown {
+      from {
+        opacity: 0;
+        transform: translateY(-30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes slideInUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes slideInLeft {
+      from {
+        transform: translateX(-100%);
+      }
+      to {
+        transform: translateX(0);
+      }
+    }
+
+    /* ===== Responsive Mobile ===== */
+    @media (max-width: 768px) {
+      .hero-department {
+        padding: 50px 0;
+      }
+
+      .hero-department h1 {
+        font-size: 2rem;
+      }
+
+      section {
+        padding: 40px 0;
+      }
+
+      .section-title {
+        font-size: 1.5rem;
+      }
+
+      .grid-container {
+        grid-template-columns: 1fr;
+        gap: 15px;
+      }
+
+      .image-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<!-- HERO SECTION -->
+<section class="hero-department">
+  <div class="container text-center" style="position: relative; z-index: 1;">
+    <h1 class="fw-bold mb-3">Departemen Dana dan Usaha</h1>
+    <p class="fw-light">HMJ Kedokteran UIN Alauddin Makassar</p>
+  </div>
+</section>
+
+<!-- PROFIL DEPARTEMEN SECTION -->
+<section>
+  <div class="container">
+    <h2 class="section-title">Profil Departemen</h2>
+    <p class="section-subtitle">Mengenal lebih jauh tentang departemen kami</p>
+    
+    <div class="card">
+      <div class="card-body">
+        <p style="line-height: 1.8; font-size: 1.05rem; color: #555;">
+          Departemen Dana dan Usaha bertugas mengelola keuangan organisasi, mencari sumber dana, dan mengembangkan usaha untuk mendukung keberlangsungan program organisasi. Kami fokus pada transparansi keuangan, optimalisasi sumber daya, dan pengembangan usaha yang berkelanjutan.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROGRAM KERJA SECTION -->
+<section>
+  <div class="container">
+    <h2 class="section-title">Program Kerja</h2>
+    <p class="section-subtitle">Kegiatan dan inisiatif utama departemen</p>
+    
+    <ul class="enhanced-list">
+      <li><strong>Manajemen Keuangan</strong> - Pengelolaan kas dan pembukuan organisasi secara transparan</li>
+      <li><strong>Fundraising</strong> - Mencari sumber pendanaan untuk kegiatan organisasi</li>
+      <li><strong>Usaha Mandiri</strong> - Mengembangkan usaha untuk pendapatan organisasi</li>
+      <li><strong>Sponsorship</strong> - Menjalin kerjasama untuk dukungan finansial kegiatan</li>
+      <li><strong>Audit Keuangan</strong> - Pemeriksaan dan pelaporan keuangan berkala</li>
+      <li><strong>Perencanaan Anggaran</strong> - Merencanakan penggunaan dana untuk kegiatan</li>
+    </ul>
+  </div>
+</section>
+
+<!-- KETUA DEPARTEMEN SECTION -->
+<section>
+  <div class="container">
+    <h2 class="section-title">Ketua Departemen</h2>
+    <p class="section-subtitle">Pemimpin dan koordinator utama</p>
+    
+    <div style="display: flex; justify-content: center; margin-top: 40px;">
+      <div class="card" style="max-width: 350px; text-align: center;">
+        <img src="https://via.placeholder.com/200?text=Ketua" alt="Ketua" class="profile-photo mx-auto mt-3">
+        <div class="card-body">
+          <h4 class="fw-bold mb-2">Nama Ketua Departemen</h4>
+          <p class="text-primary fw-bold mb-2">KETUA DEPARTEMEN DANA DAN USAHA</p>
+          <p class="text-muted" style="font-size: 0.9rem;">Memimpin departemen dan mengkoordinasikan seluruh program kerja</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ANGGOTA DEPARTEMEN SECTION (8 ANGGOTA) -->
+<section>
+  <div class="container">
+    <h2 class="section-title">Anggota Departemen</h2>
+    <p class="section-subtitle">Tim profesional yang berdedikasi</p>
+    
+    <div class="grid-container" style="grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));">
+      <!-- Anggota 1 -->
+      <div class="card text-center">
+        <img src="https://via.placeholder.com/150?text=Anggota+1" alt="Anggota 1" class="profile-photo mx-auto mt-3">
+        <div class="card-body">
+          <h5 class="fw-bold">Nama Anggota 1</h5>
+          <p class="text-muted" style="font-size: 0.9rem;">Anggota Tim</p>
+        </div>
+      </div>
+
+      <!-- Anggota 2 -->
+      <div class="card text-center">
+        <img src="https://via.placeholder.com/150?text=Anggota+2" alt="Anggota 2" class="profile-photo mx-auto mt-3">
+        <div class="card-body">
+          <h5 class="fw-bold">Nama Anggota 2</h5>
+          <p class="text-muted" style="font-size: 0.9rem;">Anggota Tim</p>
+        </div>
+      </div>
+
+      <!-- Anggota 3 -->
+      <div class="card text-center">
+        <img src="https://via.placeholder.com/150?text=Anggota+3" alt="Anggota 3" class="profile-photo mx-auto mt-3">
+        <div class="card-body">
+          <h5 class="fw-bold">Nama Anggota 3</h5>
+          <p class="text-muted" style="font-size: 0.9rem;">Anggota Tim</p>
+        </div>
+      </div>
+
+      <!-- Anggota 4 -->
+      <div class="card text-center">
+        <img src="https://via.placeholder.com/150?text=Anggota+4" alt="Anggota 4" class="profile-photo mx-auto mt-3">
+        <div class="card-body">
+          <h5 class="fw-bold">Nama Anggota 4</h5>
+          <p class="text-muted" style="font-size: 0.9rem;">Anggota Tim</p>
+        </div>
+      </div>
+
+      <!-- Anggota 5 -->
+      <div class="card text-center">
+        <img src="https://via.placeholder.com/150?text=Anggota+5" alt="Anggota 5" class="profile-photo mx-auto mt-3">
+        <div class="card-body">
+          <h5 class="fw-bold">Nama Anggota 5</h5>
+          <p class="text-muted" style="font-size: 0.9rem;">Anggota Tim</p>
+        </div>
+      </div>
+
+      <!-- Anggota 6 -->
+      <div class="card text-center">
+        <img src="https://via.placeholder.com/150?text=Anggota+6" alt="Anggota 6" class="profile-photo mx-auto mt-3">
+        <div class="card-body">
+          <h5 class="fw-bold">Nama Anggota 6</h5>
+          <p class="text-muted" style="font-size: 0.9rem;">Anggota Tim</p>
+        </div>
+      </div>
+
+      <!-- Anggota 7 -->
+      <div class="card text-center">
+        <img src="https://via.placeholder.com/150?text=Anggota+7" alt="Anggota 7" class="profile-photo mx-auto mt-3">
+        <div class="card-body">
+          <h5 class="fw-bold">Nama Anggota 7</h5>
+          <p class="text-muted" style="font-size: 0.9rem;">Anggota Tim</p>
+        </div>
+      </div>
+
+      <!-- Anggota 8 -->
+      <div class="card text-center">
+        <img src="https://via.placeholder.com/150?text=Anggota+8" alt="Anggota 8" class="profile-photo mx-auto mt-3">
+        <div class="card-body">
+          <h5 class="fw-bold">Nama Anggota 8</h5>
+          <p class="text-muted" style="font-size: 0.9rem;">Anggota Tim</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- GALERI DOKUMENTASI SECTION -->
+<section>
+  <div class="container">
+    <h2 class="section-title">Galeri Dokumentasi</h2>
+    <p class="section-subtitle">Momen-momen kegiatan departemen</p>
+    
+    <div class="image-grid">
+      <div class="image-card">
+        <img src="https://via.placeholder.com/400x300?text=Kegiatan+1" alt="Dokumentasi">
+        <div class="image-overlay">
+          <p class="fw-bold" style="margin: 0;">Fundraising Event</p>
+        </div>
+      </div>
+      
+      <div class="image-card">
+        <img src="https://via.placeholder.com/400x300?text=Kegiatan+2" alt="Dokumentasi">
+        <div class="image-overlay">
+          <p class="fw-bold" style="margin: 0;">Manajemen Keuangan</p>
+        </div>
+      </div>
+
+      <div class="image-card">
+        <img src="https://via.placeholder.com/400x300?text=Kegiatan+3" alt="Dokumentasi">
+        <div class="image-overlay">
+          <p class="fw-bold" style="margin: 0;">Usaha Mandiri</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+</body>
+</html>

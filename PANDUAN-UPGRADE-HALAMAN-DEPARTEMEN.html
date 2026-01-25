@@ -1,0 +1,532 @@
+<!-- =====================================================================
+     PANDUAN PENINGKATAN TAMPILAN HALAMAN DEPARTEMEN (hublu.html)
+     ===================================================================== -->
+
+<!-- INSTRUKSI UMUM:
+     1. JANGAN HAPUS kode HTML yang sudah ada
+     2. HANYA TAMBAHKAN style baru ke dalam <style>
+     3. UBAH class pada elemen yang sudah ada (jika perlu)
+     4. REPOSISI kode JavaScript jika ada
+
+===================================================================== -->
+
+<!-- STEP 1: TAMBAHKAN KODE INI DI DALAM <style> (sebelum </style>) -->
+
+<!-- ===== KODE CSS TAMBAHAN UNTUK PENINGKATAN TAMPILAN ===== -->
+
+/* ===== Import Font Poppins dengan berbagai weight ===== */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+/* ===== Reset & Base Styling ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  color: #2c3e50;
+  line-height: 1.6;
+  background-color: #f8f9fa;
+}
+
+/* ===== Hero Section Enhancement ===== */
+.hero-department {
+  background: linear-gradient(135deg, #1f73e6 0%, #2980b9 100%);
+  color: white;
+  padding: 80px 0;
+  position: relative;
+  overflow: hidden;
+  animation: fadeInDown 0.8s ease-out;
+}
+
+.hero-department::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: 
+    radial-gradient(circle at 20% 50%, rgba(255,255,255,0.1) 0%, transparent 50%),
+    radial-gradient(circle at 80% 80%, rgba(255,255,255,0.1) 0%, transparent 50%);
+  pointer-events: none;
+}
+
+.hero-department h1 {
+  font-size: clamp(2rem, 6vw, 3.5rem);
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-shadow: 2px 2px 8px rgba(0,0,0,0.2);
+  animation: slideInUp 0.8s ease-out 0.2s both;
+}
+
+.hero-department p {
+  font-size: 1.2rem;
+  font-weight: 300;
+  letter-spacing: 0.5px;
+  animation: slideInUp 0.8s ease-out 0.4s both;
+}
+
+/* ===== Section Styling ===== */
+section {
+  padding: 60px 0;
+  position: relative;
+}
+
+section:nth-child(odd) {
+  background-color: #ffffff;
+}
+
+section:nth-child(even) {
+  background-color: #f8f9fa;
+}
+
+.section-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #2c3e50;
+  margin-bottom: 15px;
+  position: relative;
+  display: inline-block;
+}
+
+.section-title::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  width: 100px;
+  height: 4px;
+  background: linear-gradient(90deg, #1f73e6, #2980b9);
+  border-radius: 2px;
+  animation: slideInLeft 0.6s ease-out;
+}
+
+.section-subtitle {
+  font-size: 1rem;
+  color: #7f8c8d;
+  margin-bottom: 30px;
+  font-weight: 300;
+}
+
+/* ===== Card Styling ===== */
+.card {
+  border: none;
+  border-radius: 12px;
+  background: white;
+  transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+  position: relative;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+}
+
+.card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #1f73e6, #2980b9);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease;
+}
+
+.card:hover::before {
+  transform: scaleX(1);
+}
+
+.card-body {
+  padding: 25px;
+}
+
+/* ===== Grid Layout ===== */
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 25px;
+  margin-top: 30px;
+}
+
+@media (max-width: 768px) {
+  .grid-container {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ===== List Enhancement ===== */
+.enhanced-list {
+  list-style: none;
+  margin-top: 20px;
+}
+
+.enhanced-list li {
+  padding: 12px 15px;
+  margin-bottom: 10px;
+  background: white;
+  border-left: 4px solid #1f73e6;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.08);
+}
+
+.enhanced-list li:hover {
+  background: #f8f9fa;
+  border-left-color: #2980b9;
+  transform: translateX(8px);
+}
+
+.enhanced-list li::before {
+  content: '✓ ';
+  color: #1f73e6;
+  font-weight: bold;
+  margin-right: 8px;
+}
+
+/* ===== Photo Profile ===== */
+.profile-photo {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  border: 5px solid #1f73e6;
+  object-fit: cover;
+  transition: all 0.4s ease;
+  box-shadow: 0 8px 20px rgba(31, 115, 230, 0.2);
+}
+
+.profile-photo:hover {
+  transform: scale(1.08);
+  box-shadow: 0 12px 30px rgba(31, 115, 230, 0.3);
+}
+
+/* ===== Button Styling ===== */
+.btn-custom {
+  background: linear-gradient(135deg, #1f73e6, #2980b9);
+  border: none;
+  color: white;
+  padding: 12px 30px;
+  border-radius: 6px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(31, 115, 230, 0.3);
+}
+
+.btn-custom:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(31, 115, 230, 0.4);
+  text-decoration: none;
+  color: white;
+}
+
+.btn-custom:active {
+  transform: translateY(0);
+}
+
+/* ===== Image Grid ===== */
+.image-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  margin-top: 30px;
+}
+
+.image-card {
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+  aspect-ratio: 4/3;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  background: #e8e8e8;
+}
+
+.image-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.image-card:hover img {
+  transform: scale(1.05);
+}
+
+.image-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(to top, rgba(31, 115, 230, 0.9), transparent);
+  color: white;
+  padding: 20px;
+  transform: translateY(100%);
+  transition: transform 0.3s ease;
+}
+
+.image-card:hover .image-overlay {
+  transform: translateY(0);
+}
+
+/* ===== Animations ===== */
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+/* ===== Scrollbar Enhancement ===== */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #1f73e6;
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #2980b9;
+}
+
+/* ===== Responsive Mobile ===== */
+@media (max-width: 768px) {
+  .hero-department {
+    padding: 50px 0;
+  }
+
+  .hero-department h1 {
+    font-size: 2rem;
+  }
+
+  section {
+    padding: 40px 0;
+  }
+
+  .section-title {
+    font-size: 1.5rem;
+  }
+
+  .grid-container {
+    gap: 15px;
+  }
+}
+
+<!-- ===== END KODE CSS TAMBAHAN ===== -->
+
+
+<!-- STEP 2: UBAH HERO SECTION DENGAN KODE INI -->
+
+<!-- GANTI kode lama:
+     <div class="bg-primary text-white text-center py-5">
+       <div class="container">
+         <h1 class="fw-bold">Divisi Hubungan Luar</h1>
+         <p class="fs-4">HMJK UIN Alauddin Makassar</p>
+       </div>
+     </div>
+
+     DENGAN kode baru ini:
+-->
+
+<!-- HERO SECTION BARU (LEBIH ELEGAN) -->
+<section class="hero-department">
+  <div class="container text-center" style="position: relative; z-index: 1;">
+    <h1 class="fw-bold mb-3">Departemen Hubungan Luar</h1>
+    <p class="fs-5 fw-light">HMJ Kedokteran UIN Alauddin Makassar</p>
+  </div>
+</section>
+
+
+<!-- STEP 3: UBAH SECTION TENTANG DIVISI DENGAN KODE INI -->
+
+<!-- GANTI kode lama:
+     <div class="container my-5">
+       <h2 class="fw-bold mb-3">Tentang Divisi</h2>
+       <p>...</p>
+     </div>
+
+     DENGAN kode baru ini:
+-->
+
+<!-- TENTANG DEPARTEMEN SECTION -->
+<section>
+  <div class="container">
+    <h2 class="section-title">Profil Departemen</h2>
+    <p class="section-subtitle">Mengenal lebih jauh tentang departemen kami</p>
+    
+    <div class="card">
+      <div class="card-body">
+        <p style="line-height: 1.8; font-size: 1.05rem; color: #555;">
+          Departemen Hubungan Luar bertugas menjalin relasi dan kerja sama dengan pihak eksternal 
+          demi menunjang kegiatan HMJK. Kami fokus pada membangun hubungan yang kuat dengan institusi, 
+          organisasi mitra, dan komunitas lainnya untuk memperluas jaringan dan peluang kolaborasi.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- STEP 4: UBAH PROGRAM KERJA SECTION DENGAN KODE INI -->
+
+<!-- GANTI kode lama:
+     <div class="bg-light py-5">
+       <div class="container">
+         <h2 class="fw-bold mb-3">Program Kerja</h2>
+         <ul>
+           <li>Kunjungan kelembagaan</li>
+           <li>Kolaborasi antar HMJ</li>
+           <li>Pengabdian masyarakat</li>
+         </ul>
+       </div>
+     </div>
+
+     DENGAN kode baru ini:
+-->
+
+<!-- PROGRAM KERJA SECTION -->
+<section>
+  <div class="container">
+    <h2 class="section-title">Program Kerja</h2>
+    <p class="section-subtitle">Kegiatan dan inisiatif utama departemen</p>
+    
+    <ul class="enhanced-list">
+      <li><strong>Kunjungan Institusional</strong> - Memperkuat hubungan dengan institusi pendidikan dan organisasi</li>
+      <li><strong>Kolaborasi Antar HMJ</strong> - Membangun sinergi dengan himpunan mahasiswa lainnya</li>
+      <li><strong>Pengabdian Masyarakat</strong> - Program kontribusi kepada masyarakat</li>
+      <li><strong>Media dan Publikasi</strong> - Mempublikasikan kegiatan organisasi</li>
+      <li><strong>Event dan Sponsorship</strong> - Menciptakan peluang kerjasama dan pendanaan</li>
+      <li><strong>Networking Alumni</strong> - Membangun koneksi dengan alumni sukses</li>
+    </ul>
+  </div>
+</section>
+
+
+<!-- STEP 5: TAMBAHKAN SECTION BARU DI BAWAH PROGRAM KERJA -->
+
+<!-- SECTION ANGGOTA -->
+<section>
+  <div class="container">
+    <h2 class="section-title">Anggota Departemen</h2>
+    <p class="section-subtitle">Tim profesional yang berdedikasi</p>
+    
+    <div class="grid-container">
+      <div class="card text-center">
+        <img src="https://via.placeholder.com/150?text=Anggota+1" alt="Anggota" class="profile-photo mx-auto mt-3">
+        <div class="card-body">
+          <h5 class="fw-bold">Nama Anggota 1</h5>
+          <p class="text-muted" style="font-size: 0.9rem;">Koordinator</p>
+        </div>
+      </div>
+      
+      <div class="card text-center">
+        <img src="https://via.placeholder.com/150?text=Anggota+2" alt="Anggota" class="profile-photo mx-auto mt-3">
+        <div class="card-body">
+          <h5 class="fw-bold">Nama Anggota 2</h5>
+          <p class="text-muted" style="font-size: 0.9rem;">Tim Eksternal</p>
+        </div>
+      </div>
+
+      <div class="card text-center">
+        <img src="https://via.placeholder.com/150?text=Anggota+3" alt="Anggota" class="profile-photo mx-auto mt-3">
+        <div class="card-body">
+          <h5 class="fw-bold">Nama Anggota 3</h5>
+          <p class="text-muted" style="font-size: 0.9rem;">Tim Internal</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- SECTION GALERI DOKUMENTASI -->
+<section>
+  <div class="container">
+    <h2 class="section-title">Galeri Dokumentasi</h2>
+    <p class="section-subtitle">Momen-momen kegiatan departemen</p>
+    
+    <div class="image-grid">
+      <div class="image-card">
+        <img src="https://via.placeholder.com/400x300?text=Kegiatan+1" alt="Dokumentasi">
+        <div class="image-overlay">
+          <p class="fw-bold" style="margin: 0;">Kunjungan Institusional</p>
+        </div>
+      </div>
+      
+      <div class="image-card">
+        <img src="https://via.placeholder.com/400x300?text=Kegiatan+2" alt="Dokumentasi">
+        <div class="image-overlay">
+          <p class="fw-bold" style="margin: 0;">Kolaborasi Antar HMJ</p>
+        </div>
+      </div>
+
+      <div class="image-card">
+        <img src="https://via.placeholder.com/400x300?text=Kegiatan+3" alt="Dokumentasi">
+        <div class="image-overlay">
+          <p class="fw-bold" style="margin: 0;">Event dan Gathering</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ===== RINGKASAN PERUBAHAN ===== -->
+
+PERUBAHAN YANG DILAKUKAN:
+✅ Hero section dengan gradient elegan dan animasi
+✅ Card dengan hover effect dan shadow halus
+✅ List dengan hover animation dan icon checkmark
+✅ Grid layout responsif otomatis
+✅ Section title dengan underline animation
+✅ Image cards dengan overlay effect
+✅ Profile photos dengan zoom effect
+✅ Consistent spacing dan typography
+✅ Mobile responsive
+✅ Smooth transitions & animations (CSS only)
+
+TIDAK DIHAPUS:
+✅ Navbar tetap sama
+✅ Bootstrap framework tetap
+✅ Font Poppins tetap
+✅ Meta tag dan head tetap
+
+FILE YANG PERLU DIEDIT:
+📄 hublu.html (dan file departemen lainnya dengan struktur sama)
+
