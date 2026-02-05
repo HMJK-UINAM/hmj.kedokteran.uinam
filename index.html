@@ -36,6 +36,7 @@
       --hero-start: #638949;
       --hero-end: #EFFFE1;
       --footer-title: #DEF0CF;
+      --visi-misi-text: #224B06;
     }
 
     body {
@@ -503,7 +504,7 @@
 
     .visi-box p {
       font-size: 0.95rem;
-      color: var(--muted);
+      color: var(--visi-misi-text);
       line-height: 1.9;
       position: relative;
       z-index: 2;
@@ -511,7 +512,7 @@
 
     .misi-box ol {
       margin-left: 0;
-      color: var(--muted);
+      color: var(--visi-misi-text);
       position: relative;
       z-index: 2;
       padding-left: 0;
@@ -1230,6 +1231,7 @@
       root.style.setProperty('--hero-start', dataKonten.warna.hero_start);
       root.style.setProperty('--hero-end', dataKonten.warna.hero_end);
       root.style.setProperty('--footer-title', dataKonten.warna.footer_title);
+      root.style.setProperty('--visi-misi-text', dataKonten.warna.visi_misi_text);
     }
   }
 
