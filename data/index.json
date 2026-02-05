@@ -132,5 +132,31 @@
     "email": "hmjk.uinam@gmail.com",
     "instagram": "@hmjkuinam",
     "tiktok": "@hmjkuinam"
+  },
+  "kalender": {
+    "judul": "Kalender Kegiatan",
+    "deskripsi": "Simpan tanggal kegiatan HMJ Kedokteran UINAM di Google Calendar Anda",
+    "google_calendar_id": "hmjk.uinam@gmail.com",
+    "google_calendar_embed": "https://calendar.google.com/calendar/embed?src=hmjk.uinam@gmail.com&ctz=Asia/Makassar",
+    "kegiatan_terdekat": [
+      {
+        "tanggal": "15 Februari 2026",
+        "judul": "Rapat Pleno Bulanan",
+        "waktu": "10:00 WITA",
+        "lokasi": "Ruang Rapat HMJ"
+      },
+      {
+        "tanggal": "20 Februari 2026",
+        "judul": "Workshop Kepemimpinan",
+        "waktu": "13:00 WITA",
+        "lokasi": "Auditorium FK"
+      },
+      {
+        "tanggal": "28 Februari 2026",
+        "judul": "Bakti Sosial",
+        "waktu": "08:00 WITA",
+        "lokasi": "Puskesmas Tamangapa"
+      }
+    ]
   }
 }

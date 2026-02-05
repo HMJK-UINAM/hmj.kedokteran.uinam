@@ -788,6 +788,207 @@
       height: 300px;
     }
 
+    /* ===== KALENDER SECTION ===== */
+    .kalender-section {
+      padding: 100px 0;
+      background: var(--bg);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .kalender-section::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: linear-gradient(135deg, rgba(34, 75, 6, 0.02) 0%, rgba(99, 137, 73, 0.02) 100%);
+      z-index: 0;
+    }
+
+    .kalender-content {
+      position: relative;
+      z-index: 2;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    .kalender-header {
+      text-align: center;
+      margin-bottom: 60px;
+    }
+
+    .kalender-title {
+      font-size: 2.8rem;
+      font-weight: 800;
+      color: var(--text);
+      margin-bottom: 15px;
+      letter-spacing: 0.5px;
+    }
+
+    .kalender-subtitle {
+      font-size: 1rem;
+      color: var(--accent);
+      font-weight: 500;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      margin-bottom: 20px;
+    }
+
+    .kalender-description {
+      font-size: 1.1rem;
+      color: var(--muted);
+      max-width: 600px;
+      margin: 0 auto;
+      line-height: 1.8;
+    }
+
+    .kalender-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      align-items: start;
+    }
+
+    .kalender-events {
+      background: white;
+      border-radius: 12px;
+      padding: 40px;
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+      border-left: 5px solid var(--accent);
+      transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    }
+
+    .kalender-events:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+    }
+
+    .event-item {
+      padding: 20px 0;
+      border-bottom: 1px solid var(--muted);
+      transition: all 0.3s ease;
+    }
+
+    .event-item:last-child {
+      border-bottom: none;
+    }
+
+    .event-item:hover {
+      background: rgba(99, 137, 73, 0.05);
+      margin: 0 -20px;
+      padding: 20px;
+      border-radius: 8px;
+    }
+
+    .event-date {
+      font-size: 0.9rem;
+      color: var(--primary);
+      font-weight: 600;
+      margin-bottom: 8px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .event-date::before {
+      content: '📅';
+      font-size: 1rem;
+    }
+
+    .event-title {
+      font-size: 1.2rem;
+      color: var(--text);
+      font-weight: 700;
+      margin-bottom: 8px;
+      line-height: 1.4;
+    }
+
+    .event-details {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+
+    .event-time, .event-location {
+      font-size: 0.9rem;
+      color: var(--muted);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .event-time::before {
+      content: '🕐';
+      font-size: 0.9rem;
+    }
+
+    .event-location::before {
+      content: '📍';
+      font-size: 0.9rem;
+    }
+
+    .kalender-embed {
+      background: white;
+      border-radius: 12px;
+      padding: 20px;
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+      border-top: 5px solid var(--accent);
+      height: 500px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .kalender-embed iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+      border-radius: 8px;
+    }
+
+    .kalender-btn {
+      display: inline-block;
+      padding: 14px 32px;
+      background: var(--accent);
+      color: white;
+      border: none;
+      border-radius: 6px;
+      font-size: 0.95rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+      text-decoration: none;
+      margin-top: 30px;
+      text-align: center;
+    }
+
+    .kalender-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 20px rgba(34, 75, 6, 0.3);
+      background: var(--primary);
+    }
+
+    @media (max-width: 768px) {
+      .kalender-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+      }
+
+      .kalender-events, .kalender-embed {
+        padding: 30px 20px;
+      }
+
+      .kalender-title {
+        font-size: 2rem;
+      }
+
+      .kalender-section {
+        padding: 80px 0;
+      }
+    }
+
     /* ===== FOOTER ===== */
     .footer {
       background: var(--accent);
@@ -1156,6 +1357,35 @@
     </div>
   </section>
 
+  <!-- ===== KALENDER KEGIATAN ===== -->
+  <section class="kalender-section">
+    <div class="kalender-content">
+      <div class="kalender-header">
+        <h2 class="kalender-title">Kalender Kegiatan</h2>
+        <div class="kalender-subtitle">Jadwal Kegiatan HMJ Kedokteran</div>
+        <p class="kalender-description">Simpan tanggal kegiatan HMJ Kedokteran UINAM di Google Calendar Anda</p>
+      </div>
+
+      <div class="kalender-grid">
+        <!-- Daftar Kegiatan Terdekat -->
+        <div class="kalender-events">
+          <h3 style="color: var(--text); font-size: 1.5rem; font-weight: 700; margin-bottom: 30px;">Kegiatan Terdekat</h3>
+          <div id="kegiatan-list">
+            <!-- Kegiatan akan di-generate dari JSON -->
+          </div>
+          <a href="#" class="kalender-btn" id="kalender-sync-btn">
+            <i class="bi bi-calendar-plus"></i> Tambahkan ke Google Calendar
+          </a>
+        </div>
+
+        <!-- Google Calendar Embed -->
+        <div class="kalender-embed">
+          <iframe id="google-calendar-frame" src="" style="border: 0" width="800" height="600" frameborder="0" scrolling="no"></iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- ===== FOOTER ===== -->
   <footer class="footer">
     <div class="container">
@@ -1278,6 +1508,63 @@
 
     // Update Social Media Links
     updateSocialMedia();
+
+    // Update Kalender
+    updateKalender();
+  }
+
+  function updateKalender() {
+    if (!dataKonten.kalender) return;
+
+    // Update header kalender
+    const kalenderTitle = document.querySelector('.kalender-title');
+    const kalenderSubtitle = document.querySelector('.kalender-subtitle');
+    const kalenderDescription = document.querySelector('.kalender-description');
+
+    if (kalenderTitle && dataKonten.kalender.judul) {
+      kalenderTitle.textContent = dataKonten.kalender.judul;
+    }
+    if (kalenderSubtitle) {
+      kalenderSubtitle.textContent = 'Jadwal Kegiatan HMJ Kedokteran';
+    }
+    if (kalenderDescription && dataKonten.kalender.deskripsi) {
+      kalenderDescription.textContent = dataKonten.kalender.deskripsi;
+    }
+
+    // Update Google Calendar embed
+    const calendarFrame = document.getElementById('google-calendar-frame');
+    if (calendarFrame && dataKonten.kalender.google_calendar_embed) {
+      calendarFrame.src = dataKonten.kalender.google_calendar_embed;
+    }
+
+    // Update daftar kegiatan
+    const kegiatanList = document.getElementById('kegiatan-list');
+    if (kegiatanList && dataKonten.kalender.kegiatan_terdekat) {
+      kegiatanList.innerHTML = '';
+      
+      dataKonten.kalender.kegiatan_terdekat.forEach(kegiatan => {
+        const eventItem = document.createElement('div');
+        eventItem.className = 'event-item';
+        
+        eventItem.innerHTML = `
+          <div class="event-date">${kegiatan.tanggal}</div>
+          <div class="event-title">${kegiatan.judul}</div>
+          <div class="event-details">
+            <div class="event-time">${kegiatan.waktu}</div>
+            <div class="event-location">${kegiatan.lokasi}</div>
+          </div>
+        `;
+        
+        kegiatanList.appendChild(eventItem);
+      });
+    }
+
+    // Update sync button
+    const syncBtn = document.getElementById('kalender-sync-btn');
+    if (syncBtn && dataKonten.kalender.google_calendar_id) {
+      syncBtn.href = `https://calendar.google.com/calendar/u/0/r?cid=${dataKonten.kalender.google_calendar_id}`;
+      syncBtn.target = '_blank';
+    }
   }
 
   function updatePengurus() {
