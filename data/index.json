@@ -9,7 +9,7 @@
     "hero_end": "#EFFFE1",
     "footer_title": "#DEF0CF",
     "visi_misi_title": "#224B06",
-    "visi_misi_content": "#DEF0CF"
+    "visi_misi_content": "#224B06"
   },
   "konten": {
     "title": "HMJ Kedokteran",
@@ -26,9 +26,7 @@
     ],
     "footer": {
       "tentang": "Himpunan Mahasiswa Jurusan Kedokteran UINAM adalah organisasi yang berdedikasi untuk mengembangkan mahasiswa kedokteran menjadi profesional yang kompeten dan berakhlak mulia.",
-      "copyright": "2026 HMJ Kedokteran UIN Alauddin Makassar. Dikembangkan dengan ❤ untuk Pendidikan Kedokteran Berkualitas.",
-      "kalender_link": true,
-      "kalender_text": "Lihat Kalender Kegiatan"
+      "copyright": "2026 HMJ Kedokteran UIN Alauddin Makassar. Dikembangkan dengan untuk Pendidikan Kedokteran Berkualitas."
     }
   },
   "pengurus": {
@@ -134,31 +132,5 @@
     "email": "hmjk.uinam@gmail.com",
     "instagram": "@hmjkuinam",
     "tiktok": "@hmjkuinam"
-  },
-  "kalender": {
-    "judul": "Kalender Kegiatan",
-    "deskripsi": "Simpan tanggal kegiatan HMJ Kedokteran UINAM di Google Calendar Anda",
-    "google_calendar_id": "hmjk.uinam@gmail.com",
-    "google_calendar_embed": "https://calendar.google.com/calendar/embed?src=hmjk.uinam@gmail.com&ctz=Asia/Makassar",
-    "kegiatan_terdekat": [
-      {
-        "tanggal": "15 Februari 2026",
-        "judul": "Rapat Pleno Bulanan",
-        "waktu": "10:00 WITA",
-        "lokasi": "Ruang Rapat HMJ"
-      },
-      {
-        "tanggal": "20 Februari 2026",
-        "judul": "Workshop Kepemimpinan",
-        "waktu": "13:00 WITA",
-        "lokasi": "Auditorium FK"
-      },
-      {
-        "tanggal": "28 Februari 2026",
-        "judul": "Bakti Sosial",
-        "waktu": "08:00 WITA",
-        "lokasi": "Puskesmas Tamangapa"
-      }
-    ]
   }
 }
