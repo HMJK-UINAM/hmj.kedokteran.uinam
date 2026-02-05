@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
+  <meta name="google-site-verification" content="KODE_DARI_GOOGLE" />
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>HMJ Kedokteran | UIN Alauddin Makassar</title>
@@ -26,11 +27,22 @@
       scroll-behavior: smooth;
     }
 
+    :root {
+      --primary: #2A6403;
+      --accent: #224B06;
+      --text: #224B06;
+      --muted: #D9D9D9;
+      --bg: #F8F7E0;
+      --hero-start: #638949;
+      --hero-end: #EFFFE1;
+      --footer-title: #DEF0CF;
+    }
+
     body {
       font-family: 'Montserrat', sans-serif;
-      color: #333;
+      color: var(--text);
       line-height: 1.6;
-      background: #fafafa;
+      background: var(--bg);
     }
 
     /* ===== NAVBAR MODERN STYLING ===== */
@@ -53,7 +65,7 @@
     .navbar-custom .navbar-brand {
       font-weight: 700;
       font-size: 1.3rem;
-      color: #8B7355 !important;
+      color: var(--accent) !important;
       margin-right: 3rem;
       display: flex;
       align-items: center;
@@ -71,7 +83,7 @@
     }
 
     .navbar-custom .nav-link {
-      color: #5f6368 !important;
+      color: var(--accent) !important;
       font-weight: 500;
       font-size: 0.95rem;
       padding: 0.6rem 1.1rem !important;
@@ -88,7 +100,7 @@
       left: 50%;
       width: 0;
       height: 2px;
-      background: #8B7355;
+      background: var(--accent);
       transition: all 0.3s ease;
       transform: translateX(-50%);
     }
@@ -98,7 +110,7 @@
     }
 
     .navbar-custom .nav-link:hover {
-      color: #8B7355 !important;
+      color: var(--accent) !important;
     }
 
     .navbar-custom .dropdown-toggle::after {
@@ -114,12 +126,12 @@
       border-right: 0.3em solid transparent;
       border-bottom: 0;
       border-left: 0.3em solid transparent;
-      color: #5f6368;
+      color: var(--accent);
       transition: all 0.3s ease;
     }
 
     .navbar-custom .nav-link:hover::before {
-      color: #8B7355;
+      color: var(--primary);
     }
 
     .navbar-custom .dropdown-menu {
@@ -145,7 +157,7 @@
     }
 
     .navbar-custom .dropdown-item {
-      color: #5f6368;
+      color: var(--accent);
       font-weight: 500;
       font-size: 0.9rem;
       padding: 0.8rem 1.5rem;
@@ -158,19 +170,19 @@
 
     .navbar-custom .dropdown-item:hover {
       background-color: #F5F3F0;
-      color: #8B7355;
-      border-left-color: #8B7355;
+      color: var(--accent);
+      border-left-color: var(--accent);
       padding-left: 1.8rem;
     }
 
     .navbar-custom .dropdown-item.active {
       background-color: #F5F3F0;
-      color: #8B7355;
-      border-left-color: #8B7355;
+      color: var(--accent);
+      border-left-color: var(--accent);
     }
 
     .navbar-custom .dropdown-divider {
-      border-color: #e8e8e8;
+      border-color: var(--muted);
       margin: 0.5rem 0;
     }
 
@@ -192,7 +204,7 @@
       justify-content: center;
       border-radius: 50%;
       background-color: #F5F3F0;
-      color: #8B7355;
+      color: var(--accent);
       text-decoration: none;
       transition: all 0.3s ease;
       border: none;
@@ -200,16 +212,16 @@
     }
 
     .navbar-social-icons a:hover {
-      background-color: #8B7355;
+      background-color: var(--accent);
       color: #ffffff;
       transform: translateY(-4px);
-      box-shadow: 0 4px 12px rgba(139, 115, 85, 0.25);
+      box-shadow: 0 4px 12px rgba(34, 75, 6, 0.25);
     }
 
     .navbar-toggler {
       border: none;
       padding: 0.25rem 0.5rem;
-      color: #8B7355;
+      color: var(--accent);
     }
 
     .navbar-toggler:focus {
@@ -254,7 +266,7 @@
     /* ===== HERO SECTION MODERN ===== */
     .hero {
       min-height: 100vh;
-      background: linear-gradient(135deg, #8B7355 0%, #6B8E8E 100%);
+      background: linear-gradient(135deg, #638949 0%, #EFFFE1 100%);
       display: flex;
       align-items: center;
       justify-content: center;
@@ -344,7 +356,7 @@
     }
 
     .hero-kabinet:hover {
-      color: #8B7355;
+      color: var(--accent);
       transform: translateY(-3px);
       box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
     }
@@ -366,7 +378,7 @@
 
     /* ===== TAGLINE SECTION ===== */
     .tagline {
-      background: linear-gradient(135deg, #8B7355 0%, #6B8E8E 100%);
+      background: linear-gradient(135deg, #638949 0%, #EFFFE1 100%);
       color: white;
       padding: 60px 40px;
       text-align: center;
@@ -406,7 +418,7 @@
     /* ===== VISI MISI SECTION ===== */
     .visi-misi-section {
       padding: 100px 0;
-      background: #ffffff;
+      background: var(--bg);
     }
 
     .section-title {
@@ -414,14 +426,14 @@
       font-weight: 800;
       text-align: center;
       margin-bottom: 15px;
-      color: #333;
+      color: var(--text);
       letter-spacing: 0.5px;
     }
 
     .section-subtitle {
       font-size: 1rem;
       text-align: center;
-      color: #8B7355;
+      color: var(--accent);
       margin-bottom: 50px;
       font-weight: 500;
       letter-spacing: 1px;
@@ -431,7 +443,7 @@
     .section-divider {
       width: 60px;
       height: 3px;
-      background: #8B7355;
+      background: var(--accent);
       margin: 0 auto 30px;
       border-radius: 2px;
     }
@@ -450,7 +462,7 @@
       border-radius: 12px;
       box-shadow: 0 4px 15px rgba(0, 0, 0, 0.07);
       transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-      border-left: 5px solid #8B7355;
+      border-left: 5px solid var(--accent);
       position: relative;
       overflow: hidden;
     }
@@ -462,7 +474,7 @@
       right: 0;
       width: 100px;
       height: 100px;
-      background: linear-gradient(135deg, #8B7355 0%, transparent 70%);
+      background: linear-gradient(135deg, var(--accent) 0%, transparent 70%);
       opacity: 0.1;
       border-radius: 50%;
     }
@@ -474,7 +486,7 @@
 
     .visi-box h4, .misi-box h4 {
       font-size: 1.8rem;
-      color: #333;
+      color: var(--text);
       margin-bottom: 25px;
       font-weight: 700;
       position: relative;
@@ -485,13 +497,13 @@
     }
 
     .visi-box h4 i, .misi-box h4 i {
-      color: #8B7355;
+      color: var(--primary);
       font-size: 2rem;
     }
 
     .visi-box p {
       font-size: 0.95rem;
-      color: #5f6368;
+      color: var(--muted);
       line-height: 1.9;
       position: relative;
       z-index: 2;
@@ -499,7 +511,7 @@
 
     .misi-box ol {
       margin-left: 0;
-      color: #5f6368;
+      color: var(--muted);
       position: relative;
       z-index: 2;
       padding-left: 0;
@@ -519,7 +531,7 @@
       position: absolute;
       left: 0;
       top: 0;
-      background: #8B7355;
+      background: var(--primary);
       color: white;
       width: 24px;
       height: 24px;
@@ -549,7 +561,7 @@
     /* ===== PENGURUS SECTION ===== */
     .pengurus-section {
       padding: 100px 0;
-      background: #fafafa;
+      background: #ffffff;
     }
 
     .pengurus-grid {
@@ -569,7 +581,7 @@
       text-align: center;
       box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
       transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-      border-top: 4px solid #8B7355;
+      border-top: 4px solid var(--accent);
       position: relative;
       overflow: hidden;
     }
@@ -581,7 +593,7 @@
       left: 0;
       width: 100%;
       height: 100%;
-      background: linear-gradient(135deg, rgba(139, 115, 85, 0.05) 0%, transparent 100%);
+      background: linear-gradient(135deg, rgba(34, 75, 6, 0.05) 0%, transparent 100%);
       opacity: 0;
       transition: all 0.3s ease;
     }
@@ -602,7 +614,7 @@
       margin: 0 auto 25px;
       background: linear-gradient(135deg, #e0e0e0, #f5f5f5);
       overflow: hidden;
-      border: 5px solid #8B7355;
+      border: 5px solid var(--accent);
       display: flex;
       align-items: center;
       justify-content: center;
@@ -629,7 +641,7 @@
     .pengurus-name {
       font-size: 1.15rem;
       font-weight: 700;
-      color: #333;
+      color: var(--text);
       margin: 20px 0 8px;
       position: relative;
       z-index: 2;
@@ -637,7 +649,7 @@
 
     .pengurus-position {
       font-size: 0.85rem;
-      color: #8B7355;
+      color: var(--accent);
       font-weight: 600;
       letter-spacing: 0.5px;
       text-transform: uppercase;
@@ -648,7 +660,7 @@
     /* ===== DEPARTEMEN SECTION MODERN ===== */
     .departemen-section {
       padding: 100px 0;
-      background: #ffffff;
+      background: var(--bg);
     }
 
     .departemen-grid {
@@ -669,7 +681,7 @@
       box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
       transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
       cursor: pointer;
-      border-top: 5px solid transparent;
+      border-top: 5px solid var(--accent);
       position: relative;
       overflow: hidden;
     }
@@ -681,7 +693,7 @@
       left: 0;
       width: 100%;
       height: 100%;
-      background: linear-gradient(135deg, rgba(139, 115, 85, 0.08) 0%, rgba(107, 142, 142, 0.08) 100%);
+      background: linear-gradient(135deg, rgba(34, 75, 6, 0.08) 0%, rgba(99, 137, 73, 0.08) 100%);
       opacity: 0;
       transition: all 0.3s ease;
     }
@@ -689,7 +701,7 @@
     .departemen-card:hover {
       transform: translateY(-12px);
       box-shadow: 0 16px 40px rgba(0, 0, 0, 0.15);
-      border-top-color: #8B7355;
+      border-top-color: var(--primary);
     }
 
     .departemen-card:hover::before {
@@ -703,7 +715,7 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      color: #8B7355;
+      color: var(--primary);
       transition: all 0.3s ease;
       position: relative;
       z-index: 2;
@@ -711,13 +723,13 @@
 
     .departemen-card:hover .departemen-icon {
       transform: scale(1.15) rotate(-5deg);
-      color: #6B8E8E;
+      color: var(--hero-start);
     }
 
     .departemen-name {
       font-size: 1.4rem;
       font-weight: 800;
-      color: #333;
+      color: var(--text);
       margin-bottom: 15px;
       line-height: 1.4;
       position: relative;
@@ -727,7 +739,7 @@
 
     .departemen-description {
       font-size: 0.9rem;
-      color: #5f6368;
+      color: var(--muted);
       margin-bottom: 30px;
       min-height: 60px;
       line-height: 1.7;
@@ -738,7 +750,7 @@
     .departemen-btn {
       display: inline-block;
       padding: 12px 28px;
-      background: linear-gradient(135deg, #8B7355 0%, #6B8E8E 100%);
+      background: var(--accent);
       color: white;
       border: none;
       border-radius: 6px;
@@ -766,7 +778,7 @@
 
     .departemen-btn:hover {
       transform: translateY(-2px);
-      box-shadow: 0 8px 20px rgba(139, 115, 85, 0.3);
+      box-shadow: 0 8px 20px rgba(34, 75, 6, 0.3);
     }
 
     .departemen-btn:hover::before {
@@ -776,7 +788,7 @@
 
     /* ===== FOOTER ===== */
     .footer {
-      background: #333;
+      background: var(--accent);
       color: #fff;
       padding: 60px 0 20px;
       margin-top: 80px;
@@ -793,7 +805,7 @@
       font-size: 1.1rem;
       margin-bottom: 20px;
       font-weight: 700;
-      color: #8B7355;
+      color: var(--footer-title);
       letter-spacing: 0.5px;
     }
 
@@ -823,7 +835,7 @@
     }
 
     .footer-section ul li a:hover {
-      color: #8B7355;
+      color: var(--footer-title);
       transform: translateX(4px);
     }
 
@@ -832,7 +844,7 @@
     }
 
     .footer-divider {
-      border-top: 1px solid #555;
+      border-top: 1px solid var(--muted);
       padding-top: 30px;
       margin-top: 30px;
       text-align: center;
@@ -845,13 +857,13 @@
     }
 
     .footer-divider a {
-      color: #8B7355;
+      color: var(--footer-title);
       text-decoration: none;
       transition: all 0.3s ease;
     }
 
     .footer-divider a:hover {
-      color: #6B8E8E;
+      color: var(--bg);
       text-decoration: underline;
     }
 
@@ -1181,7 +1193,7 @@
       </div>
 
       <div class="footer-divider">
-        <p>&copy; 2026 HMJ Kedokteran UIN Alauddin Makassar. Dikembangkan dengan <span style="color: #8B7355;">❤</span> untuk Pendidikan Kedokteran Berkualitas.</p>
+        <p>&copy; 2026 HMJ Kedokteran UIN Alauddin Makassar. Dikembangkan dengan <span style="color: #DEF0CF;">❤</span> untuk Pendidikan Kedokteran Berkualitas.</p>
       </div>
     </div>
   </footer>

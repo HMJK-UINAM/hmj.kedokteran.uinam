@@ -12,17 +12,24 @@
   
   <style>
     /* ========== NAVBAR STYLING ========== */
+    :root{
+      --primary: #2A6403;
+      --accent: #224B06;
+      --text: #224B06;
+      --muted: #D9D9D9;
+      --bg: #F8F7E0;
+    }
     .navbar-custom {
       background-color: #ffffff;
-      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
       padding: 0.8rem 0;
-      border-bottom: 1px solid #e8e8e8;
+      border-bottom: 1px solid var(--muted);
     }
 
     .navbar-custom .navbar-brand {
       font-weight: 700;
       font-size: 1.2rem;
-      color: #1f73e6 !important;
+      color: var(--accent) !important;
       margin-right: 2rem;
       display: flex;
       align-items: center;
@@ -31,7 +38,7 @@
     }
 
     .navbar-custom .navbar-brand:hover {
-      opacity: 0.8;
+      opacity: 0.9;
     }
 
     .navbar-custom .navbar-brand i {
@@ -39,7 +46,7 @@
     }
 
     .navbar-custom .nav-link {
-      color: #5f6368 !important;
+      color: var(--accent) !important;
       font-weight: 500;
       font-size: 0.95rem;
       padding: 0.5rem 1rem !important;
@@ -53,7 +60,7 @@
 
     .navbar-custom .nav-link:hover {
       background-color: #f8f9fa;
-      color: #1f73e6 !important;
+      color: var(--accent) !important;
     }
 
     .navbar-custom .dropdown-toggle::after {
@@ -62,7 +69,7 @@
     }
 
     .navbar-custom .dropdown-toggle::after {
-      content: '\f078';
+      content: '\\f078';
       font-family: 'bootstrap-icons';
       font-size: 0.75rem;
       border: none;
@@ -71,15 +78,15 @@
 
     .navbar-custom .dropdown-menu {
       background-color: #ffffff;
-      border: 1px solid #e8e8e8;
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      border: 1px solid var(--muted);
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
       border-radius: 6px;
       margin-top: 6px;
       min-width: 220px;
     }
 
     .navbar-custom .dropdown-item {
-      color: #5f6368;
+      color: var(--accent);
       font-weight: 500;
       font-size: 0.9rem;
       padding: 0.6rem 1.2rem;
@@ -91,16 +98,16 @@
 
     .navbar-custom .dropdown-item:hover {
       background-color: #f8f9fa;
-      color: #1f73e6;
+      color: var(--accent);
     }
 
     .navbar-custom .dropdown-item.active {
       background-color: #f8f9fa;
-      color: #1f73e6;
+      color: var(--accent);
     }
 
     .navbar-custom .dropdown-divider {
-      border-color: #e8e8e8;
+      border-color: var(--muted);
       margin: 0.3rem 0;
     }
 
@@ -115,7 +122,7 @@
     }
 
     .navbar-toggler-icon {
-      background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='%235f6368' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+      background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='%23224B06' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
     }
 
     /* Mobile responsive */

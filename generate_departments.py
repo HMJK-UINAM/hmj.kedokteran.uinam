@@ -5,6 +5,7 @@ departments = {
         "title": "Departemen Hubungan Luar",
         "name": "Hubungan Luar",
         "description": "Membangun jaringan dengan organisasi eksternal",
+        "tagline": "Jembatan Komunikasi, Kekuatan Kolaborasi",
         "profil": [
             "Departemen Hubungan Luar (HubLu) adalah departemen yang bertanggung jawab dalam membangun dan memelihara hubungan baik dengan organisasi eksternal, institusi pendidikan, organisasi mitra, dan stakeholder lainnya.",
             "Melalui komunikasi yang strategis dan program-program kerjasama yang berkelanjutan, HubLu memperkuat posisi HMJ Kedokteran UINAM di tingkat universitas, regional, maupun nasional, serta membuka peluang kolaborasi yang saling menguntungkan."
@@ -23,6 +24,7 @@ departments = {
         "title": "Departemen Dana dan Usaha",
         "name": "Dana dan Usaha",
         "description": "Mengelola keuangan dan mengembangkan usaha",
+        "tagline": "Vaskularisasi Dana, Vitalitas Himpunan",
         "profil": [
             "Departemen Dana dan Usaha (DANUS) adalah departemen yang bertugas mengelola keuangan organisasi, mencari sumber pendanaan, serta mengembangkan usaha-usaha yang menguntungkan untuk mendukung operasional HMJ Kedokteran UINAM.",
             "DANUS menjalankan peran strategis dalam perencanaan anggaran, akuntabilitas keuangan, serta inovasi usaha sosial yang memberikan nilai tambah bagi anggota dan organisasi secara keseluruhan."
@@ -42,6 +44,7 @@ departments = {
         "title": "Departemen Jaringan dan Komunikasi",
         "name": "Jaringan dan Komunikasi",
         "description": "Menjalin komunikasi internal dan media sosial",
+        "tagline": "Sinyal Pesan, Resonansi Organisasi",
         "profil": [
             "Departemen Jaringan dan Komunikasi (JARKOM) adalah departemen yang bertanggung jawab dalam mengelola komunikasi internal organisasi, media sosial, publikasi, dan strategi komunikasi HMJ Kedokteran UINAM.",
             "JARKOM memastikan informasi mengalir dengan efektif, memperkuat brand organisasi, serta membangun engagement yang kuat dengan komunitas melalui berbagai platform komunikasi modern dan efektif."
@@ -60,6 +63,7 @@ departments = {
         "title": "Departemen Pengembangan Minat dan Bakat",
         "name": "Pengembangan Minat dan Bakat",
         "description": "Mengembangkan potensi dan bakat anggota",
+        "tagline": "Potensi Terpendam, Prestasi Tersinar",
         "profil": [
             "Departemen Pengembangan Minat dan Bakat (PMB) adalah departemen yang berdedikasi untuk menggali, mengembangkan, dan mengasah potensi serta bakat setiap anggota HMJ Kedokteran UINAM melalui program-program pelatihan dan kompetisi.",
             "Melalui berbagai kegiatan workshop, seminar, kompetisi akademik, dan lomba non-akademik, PMB menciptakan ekosistem pembelajaran yang mendorong setiap anggota untuk terus berkembang dan mencapai prestasi tertinggi mereka."
@@ -79,6 +83,7 @@ departments = {
         "title": "Departemen Pengabdian Masyarakat",
         "name": "Pengabdian Masyarakat",
         "description": "Program kegiatan untuk masyarakat luas",
+        "tagline": "Ilmu Diamalkan, Masyarakat Sejahtera",
         "profil": [
             "Departemen Pengabdian Masyarakat (PENGMAS) adalah departemen yang fokus pada pelaksanaan program-program sosial, kesehatan, dan pemberdayaan masyarakat yang relevan dengan bidang kedokteran dan kemanusiaan.",
             "PENGMAS menjalankan misi mengamalkan ilmu pengetahuan kedokteran untuk memberikan manfaat nyata bagi masyarakat, membangun empati sosial, dan berkontribusi aktif dalam pembangunan masyarakat yang lebih sejahtera dan sehat."
@@ -97,6 +102,7 @@ departments = {
         "title": "Departemen Kajian Strategi dan Advokasi",
         "name": "Kajian Strategi dan Advokasi",
         "description": "Riset dan advokasi strategis organisasi",
+        "tagline": "Riset Mendalam, Advokasi Berdampak",
         "profil": [
             "Departemen Kajian Strategi dan Advokasi (KASTRAD) adalah departemen yang melakukan riset, analisis strategis, dan advokasi terhadap isu-isu yang berkaitan dengan pendidikan kedokteran, kesehatan, dan hak-hak mahasiswa.",
             "KASTRAD berperan dalam pengembangan kebijakan internal organisasi, advokasi kepada pihak eksternal, serta menciptakan ekosistem pembelajaran kritis yang mendorong pemikiran strategis dan inovasi dalam setiap inisiatif organisasi."
@@ -115,6 +121,7 @@ departments = {
         "title": "Departemen Pendidikan dan Penelitian",
         "name": "Pendidikan dan Penelitian",
         "description": "Pengembangan akademik dan penelitian",
+        "tagline": "Riset Berkualitas, Inovasi Berkelanjutan",
         "profil": [
             "Departemen Pendidikan dan Penelitian (P2) adalah departemen yang berkomitmen meningkatkan kualitas akademik, mendorong budaya penelitian, dan mengembangkan literasi ilmiah di kalangan mahasiswa kedokteran UINAM.",
             "P2 menjalankan berbagai program pembelajaran kolaboratif, workshop metodologi penelitian, dan fasilitasi penelitian yang mendukung pengembangan akademik setiap anggota serta kontribusi nyata terhadap kemajuan ilmu pengetahuan kedokteran."
@@ -134,6 +141,7 @@ departments = {
         "title": "Departemen Pengembangan Sumber Daya Manusia",
         "name": "Pengembangan Sumber Daya Manusia",
         "description": "Program pelatihan dan pengembangan SDM",
+        "tagline": "Karakter Kuat, Pemimpin Masa Depan",
         "profil": [
             "Departemen Pengembangan Sumber Daya Manusia (PSDM) adalah departemen yang fokus pada pengembangan karakter, kepemimpinan, life skills, dan kualitas SDM setiap anggota HMJ Kedokteran UINAM.",
             "PSDM menyelenggarakan program pengembangan diri, leadership training, mentoring, dan soft skills development yang dirancang untuk menciptakan generasi pemimpin yang visioner, integritas tinggi, dan siap menghadapi tantangan global."
@@ -153,6 +161,7 @@ departments = {
         "title": "Departemen Pengembangan Ilmu dan Karakter Islam",
         "name": "Pengembangan Ilmu dan Karakter Islam",
         "description": "Pendidikan Islam dan pengembangan karakter",
+        "tagline": "Ilmu Qur'anik, Akhlak Mulia",
         "profil": [
             "Departemen Pengembangan Ilmu dan Karakter Islam (PIKIS) adalah departemen yang bertugas mengembangkan pemahaman Islam yang mendalam, karakter islami yang kuat, dan integrasi nilai-nilai Islam dalam setiap aspek kehidupan mahasiswa kedokteran.",
             "PIKIS menyelenggarakan kajian Islam, mentoring spiritual, program dakwah, dan berbagai kegiatan yang meningkatkan kepribadian Islami, moralitas tinggi, serta membangun generasi medis yang tidak hanya ahli dalam ilmu kedokteran tetapi juga kuat dalam iman dan akhlak."
@@ -420,6 +429,45 @@ template = """<!DOCTYPE html>
         opacity: 1;
         transform: translateY(0);
       }}
+    }}
+
+    /* ===== TAGLINE SECTION ===== */
+    .tagline {{
+      background: linear-gradient(135deg, #8B7355 0%, #6B8E8E 100%);
+      color: white;
+      padding: 60px 40px;
+      text-align: center;
+      font-size: 1.2rem;
+      font-weight: 500;
+      letter-spacing: 0.5px;
+      line-height: 1.8;
+      position: relative;
+      overflow: hidden;
+    }}
+
+    .tagline::before {{
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: url("data:image/svg+xml,%3Csvg width='30' height='30' viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M15 0C6.7 0 0 6.7 0 15s6.7 15 15 15 15-6.7 15-15S23.3 0 15 0zm0 28C7.8 28 2 22.2 2 15S7.8 2 15 2s13 5.8 13 13-5.8 13-13 13z' fill='%23ffffff' fill-opacity='0.1'/%3E%3C/svg%3E");
+      animation: slideIn 30s linear infinite;
+    }}
+
+    @keyframes slideIn {{
+      0% {{ transform: translateX(0); }}
+      100% {{ transform: translateX(100%); }}
+    }}
+
+    .tagline p {{
+      margin: 0;
+      max-width: 900px;
+      margin-left: auto;
+      margin-right: auto;
+      position: relative;
+      z-index: 1;
     }}
 
     /* ===== DEPARTMENT SECTION ===== */
@@ -792,6 +840,13 @@ template = """<!DOCTYPE html>
     </div>
   </section>
 
+    <!-- TAGLINE -->
+  <section class="tagline">
+    <p class="mb-0">
+      "{tagline}"
+    </p>
+  </section>
+
   <!-- ========== PROFIL DEPARTEMEN ========== -->
   <section class="department-section">
     <div class="container">
@@ -927,6 +982,7 @@ for filename, data in departments.items():
     content = template.format(
         title=data["title"],
         name=data["name"],
+        tagline=data["tagline"],
         profil1=data["profil"][0],
         profil2=data["profil"][1],
         ketua_name=data["ketua_name"],

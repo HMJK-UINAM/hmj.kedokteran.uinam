@@ -1,0 +1,83 @@
+{
+  "hero": {
+    "title": "Pendidikan dan Penelitian",
+    "subtitle": "HMJ UIN Alauddin Makassar",
+    "tagline": "Dana, Vitalitas Himpunan",
+    "background": {
+      "type": "image",
+      "useImage": true,
+      "imagePath": "img/danus.background.jpg",
+      "imageOverlay": 0.3,
+      "gradient": ["#EFFFE1", "#EFFFE1"],
+      "backgroundColor": "#638949",
+      "backgroundSize": "cover",
+      "backgroundPosition": "center",
+      "backgroundAttachment": "fixed",
+      "enablePattern": true
+    },
+    "animatedPattern": {
+      "show": true,
+      "animationSpeed": "20s",
+      "opacity": 0.5
+    }
+  },
+
+  "taglineSection": {
+    "text": "Vitalitas Himpunan",
+    "useHeroBackground": true,
+    "animatedPattern": {
+      "show": true,
+      "animationSpeed": "30s",
+      "opacity": 0.1
+    }
+  },
+
+  "profil": "Departemen Dana dan Usaha (Danus) berperan dalam mengupayakan pemasukan dana secara berkelanjutan untuk menunjang seluruh kegiatan HMJ Kedokteran. Departemen ini menyelenggarakan berbagai kegiatan usaha dan penggalangan dana yang halal, transparan, dan bertanggung jawab.",
+
+  "ketua": {
+    "nama": "NAyla",
+    "foto": "img/danus/ketua.jpg",
+    "deskripsi": "Memimpin Dana dan Usaha dengan dedikasi penuh, memastikan pengelolaan dana berjalan profesional."
+  },
+
+  "anggota": [
+    { "nama": "Nama Anggota 1", "foto": "img/danus/anggota1.jpg" },
+    { "nama": "Nama Anggota 2", "foto": "img/danus/anggota2.jpg" },
+    { "nama": "Nama Anggota 3", "foto": "img/danus/anggota3.jpg" },
+    { "nama": "Nama Anggota 4", "foto": "img/danus/anggota4.jpg" },
+    { "nama": "Nama Anggota 5", "foto": "img/danus/anggota5.jpg" }
+  ],
+
+  "programKerja": [
+    {
+      "nama": "Program Kerja 1",
+      "deskripsi": "Deskripsi lengkap program kerja pertama..."
+    },
+    {
+      "nama": "Program Kerja 2",
+      "deskripsi": "Deskripsi lengkap program kerja kedua..."
+    }
+  ],
+
+  "jobdesk": [
+    {
+      "nama": "Jobdesk 1",
+      "deskripsi": "Deskripsi tugas dan tanggung jawab pertama..."
+    },
+    {
+      "nama": "Jobdesk 2",
+      "deskripsi": "Deskripsi tugas dan tanggung jawab kedua..."
+    }
+  ],
+
+  "colors": {
+    "primary": "#2A6403",
+    "accent": "#224B06",
+    "text": "#224b06",
+    "muted": "#465247",
+    "background": "#F8F7E0",
+    "heroGradientStart": "#638949",
+    "heroGradientEnd": "#EFFFE1",
+    "footerTitle": "#DEF0CF"
+  }
+}
