@@ -994,7 +994,6 @@
       background: var(--accent);
       color: #fff;
       padding: 60px 0 20px;
-      margin-top: 80px;
     }
 
     .footer-content {
@@ -1038,12 +1037,8 @@
     }
 
     .footer-section ul li a:hover {
-      color: var(--footer-title);
+      color: var(--primary);
       transform: translateX(4px);
-    }
-
-    .footer-section ul li a i {
-      font-size: 1rem;
     }
 
     .footer-divider {
@@ -1057,17 +1052,6 @@
       font-size: 0.85rem;
       color: #999;
       margin: 0;
-    }
-
-    .footer-divider a {
-      color: var(--footer-title);
-      text-decoration: none;
-      transition: all 0.3s ease;
-    }
-
-    .footer-divider a:hover {
-      color: var(--bg);
-      text-decoration: underline;
     }
 
     /* ===== UTILITY CLASSES ===== */
@@ -1390,24 +1374,21 @@
   <footer class="footer">
     <div class="container">
       <div class="footer-content">
-        <!-- About Section -->
         <div class="footer-section">
           <h5><i class="bi bi-hospital-fill"></i> Tentang Kami</h5>
           <p>Himpunan Mahasiswa Jurusan Kedokteran UINAM adalah organisasi yang berdedikasi untuk mengembangkan mahasiswa kedokteran menjadi profesional yang kompeten dan berakhlak mulia.</p>
         </div>
 
-        <!-- Quick Links -->
         <div class="footer-section">
           <h5><i class="bi bi-link-45deg"></i> Link Cepat</h5>
           <ul>
             <li><a href="index.html"><i class="bi bi-house"></i> Beranda</a></li>
-            <li><a href="#departemen"><i class="bi bi-building"></i> Departemen</a></li>
-            <li><a href="#visi"><i class="bi bi-eye"></i> Visi & Misi</a></li>
-            <li><a href="#pengurus"><i class="bi bi-people"></i> Kepengurusan</a></li>
+            <li><a href="index.html#departemen"><i class="bi bi-building"></i> Departemen</a></li>
+            <li><a href="index.html#visi"><i class="bi bi-eye"></i> Visi & Misi</a></li>
+            <li><a href="index.html#pengurus"><i class="bi bi-people"></i> Kepengurusan</a></li>
           </ul>
         </div>
 
-        <!-- Contact Info -->
         <div class="footer-section">
           <h5><i class="bi bi-envelope"></i> Hubungi Kami</h5>
           <ul>
@@ -1416,16 +1397,10 @@
             <li><a href="https://www.tiktok.com/@hmjkuinam?_r=1&_t=ZS-93GMKX5Mlqq" target="_blank"><i class="bi bi-tiktok"></i> @hmjkuinam</a></li>
           </ul>
         </div>
-
-        <!-- Social Media -->
-        <div class="footer-section">
-          <h5><i class="bi bi-share"></i> Ikuti Kami</h5>
-          <p>Tetap terhubung dengan kami melalui media sosial untuk update terbaru program dan kegiatan.</p>
-        </div>
       </div>
 
       <div class="footer-divider">
-        <p>&copy; 2026 HMJ Kedokteran UIN Alauddin Makassar. Dikembangkan dengan <span style="color: #DEF0CF;">❤</span> untuk Pendidikan Kedokteran Berkualitas.</p>
+        <p>&copy; 2026 HMJ Kedokteran UIN Alauddin Makassar. Dikembangkan dengan <span style="color: #2A6403;">❤</span> untuk Pendidikan Kedokteran Berkualitas.</p>
       </div>
     </div>
   </footer>
@@ -1502,12 +1477,6 @@
 
     // Update Departemen
     updateDepartemen();
-
-    // Update Footer
-    updateFooter();
-
-    // Update Social Media Links
-    updateSocialMedia();
 
     // Update Kalender
     updateKalender();
@@ -1670,16 +1639,6 @@
         link.href = dataKonten.social_media.tiktok;
       }
     });
-
-    // Update contact info
-    if (dataKonten.kontak) {
-      const emailLink = document.querySelector('a[href^="mailto:"]');
-      if (emailLink && dataKonten.kontak.email) {
-        emailLink.href = `mailto:${dataKonten.kontak.email}`;
-        emailLink.textContent = dataKonten.kontak.email;
-      }
-    }
-  }
 
   // Load data when page loads
   document.addEventListener('DOMContentLoaded', loadData);
