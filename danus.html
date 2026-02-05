@@ -1579,7 +1579,28 @@
       })
       .catch(err => console.error('Failed to load department data:', err));
   })();
-  // Navbar scroll effect
+  // Load data from JSON - sama seperti index.html
+  let dataKonten = {};
+  
+  async function loadKonten() {
+    try {
+      const response = await fetch('data/index.json');
+      dataKonten = await response.json();
+      
+      // Load department specific data
+      const deptResponse = await fetch('data/jarkom.json');
+      const deptData = await deptResponse.json();
+      
+      // Merge data
+      dataKonten = { ...dataKonten, ...deptData };
+      
+      // Apply updates
+      updateColors();
+      updateContent();
+    } catch (error) {
+      console.error('Error loading data:', error);
+    }
+  }
   window.addEventListener('scroll', function() {
     const navbar = document.querySelector('.navbar-custom');
     if (window.scrollY > 50) {

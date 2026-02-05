@@ -1579,6 +1579,32 @@
       })
       .catch(err => console.error('Failed to load department data:', err));
   })();
+  // Load data from JSON - sama seperti index.html
+  let dataKonten = {};
+  
+  async function loadKonten() {
+    try {
+      const response = await fetch('data/index.json');
+      dataKonten = await response.json();
+      
+      // Load department specific data
+      const deptResponse = await fetch('data/kastrad.json');
+      const deptData = await deptResponse.json();
+      
+      // Merge data
+      dataKonten = { ...dataKonten, ...deptData };
+      
+      // Apply updates
+      updateColors();
+      updateContent();
+    } catch (error) {
+      console.error('Error loading data:', error);
+    }
+  }
+
+  // Load data when page loads
+  document.addEventListener('DOMContentLoaded', loadKonten);
+
   // Navbar scroll effect
   window.addEventListener('scroll', function() {
     const navbar = document.querySelector('.navbar-custom');
