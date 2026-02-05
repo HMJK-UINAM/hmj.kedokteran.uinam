@@ -26,7 +26,9 @@
     ],
     "footer": {
       "tentang": "Himpunan Mahasiswa Jurusan Kedokteran UINAM adalah organisasi yang berdedikasi untuk mengembangkan mahasiswa kedokteran menjadi profesional yang kompeten dan berakhlak mulia.",
-      "copyright": "2026 HMJ Kedokteran UIN Alauddin Makassar. Dikembangkan dengan ❤ untuk Pendidikan Kedokteran Berkualitas."
+      "copyright": "2026 HMJ Kedokteran UIN Alauddin Makassar. Dikembangkan dengan ❤ untuk Pendidikan Kedokteran Berkualitas.",
+      "kalender_link": true,
+      "kalender_text": "Lihat Kalender Kegiatan"
     }
   },
   "pengurus": {

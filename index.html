@@ -1404,6 +1404,7 @@
             <li><a href="#departemen"><i class="bi bi-building"></i> Departemen</a></li>
             <li><a href="#visi"><i class="bi bi-eye"></i> Visi & Misi</a></li>
             <li><a href="#pengurus"><i class="bi bi-people"></i> Kepengurusan</a></li>
+            <li id="footer-kalender-link" style="display: none;"><a href="#kalender"><i class="bi bi-calendar"></i> <span class="footer-kalender-text">Lihat Kalender Kegiatan</span></a></li>
           </ul>
         </div>
 
@@ -1511,6 +1512,24 @@
 
     // Update Kalender
     updateKalender();
+
+    // Update Footer Kalender Link
+    updateFooterKalender();
+  }
+
+  function updateFooterKalender() {
+    if (!dataKonten.konten.footer) return;
+
+    const footerKalenderLink = document.getElementById('footer-kalender-link');
+    const footerKalenderText = document.querySelector('.footer-kalender-text');
+
+    if (footerKalenderLink && dataKonten.konten.footer.kalender_link) {
+      footerKalenderLink.style.display = 'block';
+      
+      if (footerKalenderText && dataKonten.konten.footer.kalender_text) {
+        footerKalenderText.textContent = dataKonten.konten.footer.kalender_text;
+      }
+    }
   }
 
   function updateKalender() {
