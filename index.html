@@ -36,7 +36,8 @@
       --hero-start: #638949;
       --hero-end: #EFFFE1;
       --footer-title: #DEF0CF;
-      --visi-misi-text: #224B06;
+      --visi-misi-title: #224B06;
+      --visi-misi-content: #224B06;
     }
 
     body {
@@ -487,7 +488,7 @@
 
     .visi-box h4, .misi-box h4 {
       font-size: 1.8rem;
-      color: var(--text);
+      color: var(--visi-misi-title);
       margin-bottom: 25px;
       font-weight: 700;
       position: relative;
@@ -504,7 +505,7 @@
 
     .visi-box p {
       font-size: 0.95rem;
-      color: var(--visi-misi-text);
+      color: var(--visi-misi-content);
       line-height: 1.9;
       position: relative;
       z-index: 2;
@@ -512,7 +513,7 @@
 
     .misi-box ol {
       margin-left: 0;
-      color: var(--visi-misi-text);
+      color: var(--visi-misi-content);
       position: relative;
       z-index: 2;
       padding-left: 0;
@@ -1231,7 +1232,8 @@
       root.style.setProperty('--hero-start', dataKonten.warna.hero_start);
       root.style.setProperty('--hero-end', dataKonten.warna.hero_end);
       root.style.setProperty('--footer-title', dataKonten.warna.footer_title);
-      root.style.setProperty('--visi-misi-text', dataKonten.warna.visi_misi_text);
+      root.style.setProperty('--visi-misi-title', dataKonten.warna.visi_misi_title);
+      root.style.setProperty('--visi-misi-content', dataKonten.warna.visi_misi_content);
     }
   }
 
