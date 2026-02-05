@@ -1,0 +1,134 @@
+{
+  "warna": {
+    "primary": "#2A6403",
+    "accent": "#224B06",
+    "text": "#224B06",
+    "muted": "#D9D9D9",
+    "bg": "#F8F7E0",
+    "hero_start": "#638949",
+    "hero_end": "#EFFFE1",
+    "footer_title": "#DEF0CF"
+  },
+  "konten": {
+    "title": "HMJ Kedokteran",
+    "university": "Universitas Islam Negeri Alauddin Makassar",
+    "kabinet": "Kabinet Simfoni",
+    "tagline": "Hangat Bersua, Cerdas Berkarya",
+    "visi": "Transformasi HMJK UINAM Sebagai Rumah yang Harmonis, Ruang Kolaborasi yang Progresif, dan Regenerasi yang Strategis.",
+    "misi": [
+      "Membentuk HMJK yang berintegritas dan uswatun hasanah",
+      "Revitalisasi dan Pemberdayaan lingkungan kampus yang nyaman sebagai wadah bertumbuh",
+      "HMJK aktif bersinergi secara internal maupun eksternal",
+      "Mengintegrasikan bonding dalam setiap proses kerja agar terealisasi dengan spirit kebersamaan",
+      "Pemaksimalan Realisasi Program Kerja yang Berkualitas"
+    ],
+    "footer": {
+      "tentang": "Himpunan Mahasiswa Jurusan Kedokteran UINAM adalah organisasi yang berdedikasi untuk mengembangkan mahasiswa kedokteran menjadi profesional yang kompeten dan berakhlak mulia.",
+      "copyright": "2026 HMJ Kedokteran UIN Alauddin Makassar. Dikembangkan dengan ❤ untuk Pendidikan Kedokteran Berkualitas."
+    }
+  },
+  "pengurus": {
+    "ketua_umum": {
+      "nama": "Ara Azzahra Ramadhani",
+      "jabatan": "Ketua Umum",
+      "foto": ""
+    },
+    "pengurus_inti": [
+      {
+        "nama": "Ayesha Azzahra Parsa",
+        "jabatan": "Sekretaris Umum",
+        "foto": "",
+        "border_color": "#27ae60"
+      },
+      {
+        "nama": "Siti Nailah Fadhilah",
+        "jabatan": "Wakil Sekretaris Umum",
+        "foto": "",
+        "border_color": "#27ae60"
+      },
+      {
+        "nama": "Safira Safar",
+        "jabatan": "Bendahara Umum",
+        "foto": "",
+        "border_color": "#e74c3c"
+      },
+      {
+        "nama": "Andi Sri Rahmi Putri",
+        "jabatan": "Wakil Bendahara Umum",
+        "foto": "",
+        "border_color": "#e74c3c"
+      }
+    ]
+  },
+  "departemen": [
+    {
+      "icon": "📋",
+      "nama": "Departemen Administrasi",
+      "deskripsi": "Mengelola administrasi dan dokumentasi organisasi",
+      "link": "admin.html"
+    },
+    {
+      "icon": "🌍",
+      "nama": "Hubungan Luar",
+      "deskripsi": "Membangun jaringan dengan organisasi eksternal",
+      "link": "hublu.html"
+    },
+    {
+      "icon": "💰",
+      "nama": "Dana dan Usaha",
+      "deskripsi": "Mengelola keuangan dan mengembangkan usaha",
+      "link": "danus.html"
+    },
+    {
+      "icon": "📡",
+      "nama": "Jaringan dan Komunikasi",
+      "deskripsi": "Menjalin komunikasi internal dan media sosial",
+      "link": "jarkom.html"
+    },
+    {
+      "icon": "🎯",
+      "nama": "Pengembangan Minat dan Bakat",
+      "deskripsi": "Mengembangkan potensi dan bakat anggota",
+      "link": "pmb.html"
+    },
+    {
+      "icon": "🤝",
+      "nama": "Pengabdian Masyarakat",
+      "deskripsi": "Program kegiatan untuk masyarakat luas",
+      "link": "pengmas.html"
+    },
+    {
+      "icon": "📊",
+      "nama": "Kajian Strategi dan Advokasi",
+      "deskripsi": "Riset dan advokasi strategis organisasi",
+      "link": "kastrad.html"
+    },
+    {
+      "icon": "📚",
+      "nama": "Pendidikan dan Penelitian",
+      "deskripsi": "Pengembangan akademik dan penelitian",
+      "link": "p2.html"
+    },
+    {
+      "icon": "👥",
+      "nama": "Pengembangan Sumber Daya Manusia",
+      "deskripsi": "Program pelatihan dan pengembangan SDM",
+      "link": "psdm.html"
+    },
+    {
+      "icon": "🕌",
+      "nama": "Pengembangan Ilmu dan Karakter Islam",
+      "deskripsi": "Pendidikan Islam dan pengembangan karakter",
+      "link": "pikis.html"
+    }
+  ],
+  "social_media": {
+    "instagram": "https://www.instagram.com/hmjkuinam?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==",
+    "tiktok": "https://www.tiktok.com/@hmjkuinam?_r=1&_t=ZS-93GMKX5Mlqq"
+  },
+  "kontak": {
+    "email": "hmjk.uinam@gmail.com",
+    "instagram": "@hmjkuinam",
+    "tiktok": "@hmjkuinam"
+  }
+}

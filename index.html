@@ -1205,6 +1205,194 @@
 
 <!-- Custom JavaScript -->
 <script>
+  // Load data from JSON
+  let dataKonten = {};
+  
+  async function loadData() {
+    try {
+      const response = await fetch('data/index.json');
+      dataKonten = await response.json();
+      updateContent();
+      updateColors();
+    } catch (error) {
+      console.error('Error loading data:', error);
+    }
+  }
+
+  function updateColors() {
+    if (dataKonten.warna) {
+      const root = document.documentElement;
+      root.style.setProperty('--primary', dataKonten.warna.primary);
+      root.style.setProperty('--accent', dataKonten.warna.accent);
+      root.style.setProperty('--text', dataKonten.warna.text);
+      root.style.setProperty('--muted', dataKonten.warna.muted);
+      root.style.setProperty('--bg', dataKonten.warna.bg);
+      root.style.setProperty('--hero-start', dataKonten.warna.hero_start);
+      root.style.setProperty('--hero-end', dataKonten.warna.hero_end);
+      root.style.setProperty('--footer-title', dataKonten.warna.footer_title);
+    }
+  }
+
+  function updateContent() {
+    if (!dataKonten.konten) return;
+
+    // Update Hero Section
+    const heroTitle = document.querySelector('.hero-title');
+    const heroUniv = document.querySelector('.hero-univ');
+    const heroKabinet = document.querySelector('.hero-kabinet');
+    const taglineText = document.querySelector('.tagline .mb-0');
+
+    if (heroTitle && dataKonten.konten.title) heroTitle.textContent = dataKonten.konten.title;
+    if (heroUniv && dataKonten.konten.university) heroUniv.textContent = dataKonten.konten.university;
+    if (heroKabinet && dataKonten.konten.kabinet) heroKabinet.textContent = dataKonten.konten.kabinet;
+    if (taglineText && dataKonten.konten.tagline) taglineText.textContent = `"${dataKonten.konten.tagline}"`;
+
+    // Update Visi & Misi
+    const visiText = document.querySelector('.visi-box p');
+    const misiList = document.querySelector('.misi-box ol');
+    
+    if (visiText && dataKonten.konten.visi) visiText.textContent = dataKonten.konten.visi;
+    
+    if (misiList && dataKonten.konten.misi) {
+      misiList.innerHTML = '';
+      dataKonten.konten.misi.forEach((misi, index) => {
+        const li = document.createElement('li');
+        li.setAttribute('data-number', index + 1);
+        li.textContent = misi;
+        misiList.appendChild(li);
+      });
+    }
+
+    // Update Pengurus
+    updatePengurus();
+
+    // Update Departemen
+    updateDepartemen();
+
+    // Update Footer
+    updateFooter();
+
+    // Update Social Media Links
+    updateSocialMedia();
+  }
+
+  function updatePengurus() {
+    if (!dataKonten.pengurus) return;
+
+    // Update Ketua Umum
+    const ketuaFoto = document.querySelector('.pengurus-card img');
+    const ketuaNama = document.querySelector('.pengurus-name');
+    const ketuaJabatan = document.querySelector('.pengurus-position');
+
+    if (ketuaFoto && dataKonten.pengurus.ketua_umum.foto) {
+      ketuaFoto.src = dataKonten.pengurus.ketua_umum.foto;
+    }
+    if (ketuaNama && dataKonten.pengurus.ketua_umum.nama) {
+      ketuaNama.textContent = dataKonten.pengurus.ketua_umum.nama;
+    }
+    if (ketuaJabatan && dataKonten.pengurus.ketua_umum.jabatan) {
+      ketuaJabatan.textContent = dataKonten.pengurus.ketua_umum.jabatan;
+    }
+
+    // Update Pengurus Inti
+    const pengurusIntiGrid = document.querySelectorAll('.pengurus-grid')[1];
+    if (pengurusIntiGrid && dataKonten.pengurus.pengurus_inti) {
+      const existingCards = pengurusIntiGrid.querySelectorAll('.pengurus-card');
+      existingCards.forEach((card, index) => {
+        if (dataKonten.pengurus.pengurus_inti[index]) {
+          const pengurus = dataKonten.pengurus.pengurus_inti[index];
+          const foto = card.querySelector('img');
+          const nama = card.querySelector('.pengurus-name');
+          const jabatan = card.querySelector('.pengurus-position');
+          const photoCircle = card.querySelector('.photo-circle');
+
+          if (foto && pengurus.foto) foto.src = pengurus.foto;
+          if (nama) nama.textContent = pengurus.nama;
+          if (jabatan) jabatan.textContent = pengurus.jabatan;
+          if (photoCircle && pengurus.border_color) {
+            photoCircle.style.borderColor = pengurus.border_color;
+          }
+        }
+      });
+    }
+  }
+
+  function updateDepartemen() {
+    if (!dataKonten.departemen) return;
+
+    const departemenGrid = document.querySelector('.departemen-grid');
+    if (!departemenGrid) return;
+
+    const existingCards = departemenGrid.querySelectorAll('.departemen-card, a');
+    existingCards.forEach((element, index) => {
+      const card = element.classList.contains('departemen-card') ? element : element.querySelector('.departemen-card');
+      if (card && dataKonten.departemen[index]) {
+        const departemen = dataKonten.departemen[index];
+        const icon = card.querySelector('.departemen-icon');
+        const nama = card.querySelector('.departemen-name');
+        const deskripsi = card.querySelector('.departemen-description');
+        const link = card.querySelector('.departemen-btn');
+
+        if (icon) icon.textContent = departemen.icon;
+        if (nama) nama.textContent = departemen.nama;
+        if (deskripsi) deskripsi.textContent = departemen.deskripsi;
+        
+        if (link) {
+          if (element.tagName === 'A') {
+            element.href = departemen.link;
+          } else {
+            link.href = departemen.link;
+          }
+        }
+      }
+    });
+  }
+
+  function updateFooter() {
+    if (!dataKonten.konten.footer) return;
+
+    const footerTentang = document.querySelector('.footer-section p');
+    const footerCopyright = document.querySelector('.footer-divider p');
+
+    if (footerTentang && dataKonten.konten.footer.tentang) {
+      footerTentang.textContent = dataKonten.konten.footer.tentang;
+    }
+    if (footerCopyright && dataKonten.konten.footer.copyright) {
+      footerCopyright.innerHTML = `&copy; ${dataKonten.konten.footer.copyright}`;
+    }
+  }
+
+  function updateSocialMedia() {
+    if (!dataKonten.social_media) return;
+
+    const instagramLinks = document.querySelectorAll('a[href*="instagram"]');
+    const tiktokLinks = document.querySelectorAll('a[href*="tiktok"]');
+
+    instagramLinks.forEach(link => {
+      if (dataKonten.social_media.instagram) {
+        link.href = dataKonten.social_media.instagram;
+      }
+    });
+
+    tiktokLinks.forEach(link => {
+      if (dataKonten.social_media.tiktok) {
+        link.href = dataKonten.social_media.tiktok;
+      }
+    });
+
+    // Update contact info
+    if (dataKonten.kontak) {
+      const emailLink = document.querySelector('a[href^="mailto:"]');
+      if (emailLink && dataKonten.kontak.email) {
+        emailLink.href = `mailto:${dataKonten.kontak.email}`;
+        emailLink.textContent = dataKonten.kontak.email;
+      }
+    }
+  }
+
+  // Load data when page loads
+  document.addEventListener('DOMContentLoaded', loadData);
+
   // Navbar scroll effect
   window.addEventListener('scroll', function() {
     const navbar = document.querySelector('.navbar-custom');
