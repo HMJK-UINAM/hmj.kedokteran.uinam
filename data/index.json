@@ -26,7 +26,7 @@
     ],
     "footer": {
       "tentang": "Himpunan Mahasiswa Jurusan Kedokteran UINAM adalah organisasi yang berdedikasi untuk mengembangkan mahasiswa kedokteran menjadi profesional yang kompeten dan berakhlak mulia.",
-      "copyright": "2026 HMJ Kedokteran UIN Alauddin Makassar. Dikembangkan dengan untuk Pendidikan Kedokteran Berkualitas."
+      "copyright": "2026 HMJ Kedokteran UIN Alauddin Makassar. Dikembangkan dengan ❤ untuk Pendidikan Kedokteran Berkualitas."
     }
   },
   "pengurus": {
@@ -65,7 +65,7 @@
   "departemen": [
     {
       "icon": "📋",
-      "nama": "Departemen Administrasi",
+      "nama": "Administrasi",
       "deskripsi": "Mengelola administrasi dan dokumentasi organisasi",
       "link": "admin.html"
     },
@@ -132,5 +132,30 @@
     "email": "hmjk.uinam@gmail.com",
     "instagram": "@hmjkuinam",
     "tiktok": "@hmjkuinam"
+  },
+  "kalender": {
+    "judul": "Kalender Kegiatan",
+    "google_calendar_embed": "https://calendar.google.com/calendar/embed?src=hmjk.uinam@gmail.com&ctz=Asia/Makassar",
+    "google_calendar_id": "hmjk.uinam@gmail.com",
+    "kegiatan_terdekat": [
+      {
+        "tanggal": "15 Februari 2026",
+        "judul": "Rapat Kerja HMJ",
+        "waktu": "10:00 - 12:00 WITA",
+        "lokasi": "Ruang Rapat FK UINAM"
+      },
+      {
+        "tanggal": "20 Februari 2026",
+        "judul": "Workshop Kepemimpinan",
+        "waktu": "13:00 - 16:00 WITA",
+        "lokasi": "Auditorium FK UINAM"
+      },
+      {
+        "tanggal": "1 Maret 2026",
+        "judul": "Bakti Sosial",
+        "waktu": "08:00 - 12:00 WITA",
+        "lokasi": "Puskesmas Tamalanrea"
+      }
+    ]
   }
 }

@@ -664,7 +664,6 @@
       padding: 100px 0;
       background: var(--bg);
     }
-
     
     .departemen-grid {
       display: grid;
@@ -675,7 +674,6 @@
       margin-left: auto;
       margin-right: auto;
     }
-
 
     .departemen-card {
       background: white;
@@ -690,7 +688,6 @@
       overflow: hidden;
     }
 
-
     .departemen-card::before {
       content: '';
       position: absolute;
@@ -703,18 +700,15 @@
       transition: all 0.3s ease;
     }
 
-
     .departemen-card:hover {
       transform: translateY(-12px);
       box-shadow: 0 16px 40px rgba(0, 0, 0, 0.15);
       border-top-color: var(--primary);
     }
 
-
     .departemen-card:hover::before {
       opacity: 1;
     }
-
 
     .departemen-icon {
       font-size: 3.5rem;
@@ -729,12 +723,10 @@
       z-index: 2;
     }
 
-
     .departemen-card:hover .departemen-icon {
       transform: scale(1.15) rotate(-5deg);
       color: var(--hero-start);
     }
-
 
     .departemen-name {
       font-size: 1.4rem;
@@ -747,7 +739,6 @@
       letter-spacing: 0.5px;
     }
 
-
     .departemen-description {
       font-size: 0.9rem;
       color: var(--muted);
@@ -757,7 +748,6 @@
       position: relative;
       z-index: 2;
     }
-
 
     .departemen-btn {
       display: inline-block;
@@ -774,7 +764,6 @@
       position: relative;
       overflow: hidden;
     }
-
 
     .departemen-btn::before {
       content: '';
@@ -793,7 +782,6 @@
       transform: translateY(-2px);
       box-shadow: 0 8px 20px rgba(34, 75, 6, 0.3);
     }
-
 
     .departemen-btn:hover::before {
       width: 300px;
@@ -1186,7 +1174,7 @@
   </section>
 
   <!-- VISI MISI -->
-  <section class="visi-misi-section">
+  <section class="visi-misi-section" id="visi">
     <div class="container">
       <h2 class="section-title">Visi & Misi</h2>
       <div class="section-divider"></div>
@@ -1212,7 +1200,7 @@
   </section>
 
   <!-- PENGURUS -->
-  <section class="pengurus-section">
+  <section class="pengurus-section" id="pengurus">
     <div class="container">
       <h2 class="section-title">Struktur Kepengurusan</h2>
       <div class="section-divider"></div>
@@ -1272,23 +1260,24 @@
   </section>
 
   <!-- DIVISI ORGANISASI -->
-  <section class="departemen-section">
+  <section class="departemen-section" id="departemen">
     <div class="container">
       <h2 class="section-title">Divisi Organisasi</h2>
       <div class="section-divider"></div>
 
       <div class="departemen-grid">
+       
         <div class="departemen-card">
           <div class="departemen-icon">📋</div>
-          <h3 class="departemen-name">Departemen Administrasi</h3>
+          <h3 class="departemen-name">Administrasi</h3>
           <p class="departemen-description">Mengelola administrasi dan dokumentasi organisasi</p>
           <a href="admin.html" class="departemen-btn">Lihat Detail</a>
         </div>
 
-          <div class="departemen-card">
-            <div class="departemen-icon">🌍</div>
-            <h3 class="departemen-name">Hubungan Luar</h3>
-            <p class="departemen-description">Membangun jaringan dengan organisasi eksternal</p>
+        <div class="departemen-card">
+          <div class="departemen-icon">🌍</div>
+           <h3 class="departemen-name">Hubungan Luar</h3>
+           <p class="departemen-description">Membangun jaringan dengan organisasi eksternal</p>
           <a href="hublu.html" class="departemen-btn">Lihat Detail</a>
         </div>
 
@@ -1348,16 +1337,14 @@
           <a href="pikis.html" class="departemen-btn">Lihat Detail</a>
         </div>
       </div>
-    </div>
   </section>
 
   <!-- ===== KALENDER KEGIATAN ===== -->
-  <section class="kalender-section">
+  <section class="kalender-section" id="kalender">
     <div class="kalender-content">
       <div class="kalender-header">
         <h2 class="kalender-title">Kalender Kegiatan</h2>
         <div class="kalender-subtitle">Jadwal Kegiatan HMJ Kedokteran</div>
-        <p class="kalender-description">Simpan tanggal kegiatan HMJ Kedokteran UINAM di Google Calendar Anda</p>
       </div>
 
       <div class="kalender-grid">
@@ -1393,9 +1380,9 @@
           <h5><i class="bi bi-link-45deg"></i> Link Cepat</h5>
           <ul>
             <li><a href="index.html"><i class="bi bi-house"></i> Beranda</a></li>
-            <li><a href="index.html#departemen"><i class="bi bi-building"></i> Departemen</a></li>
-            <li><a href="index.html#visi"><i class="bi bi-eye"></i> Visi & Misi</a></li>
-            <li><a href="index.html#pengurus"><i class="bi bi-people"></i> Kepengurusan</a></li>
+            <li><a href="#departemen"><i class="bi bi-building"></i> Departemen</a></li>
+            <li><a href="#visi"><i class="bi bi-eye"></i> Visi & Misi</a></li>
+            <li><a href="#pengurus"><i class="bi bi-people"></i> Kepengurusan</a></li>
           </ul>
         </div>
 
@@ -1490,6 +1477,12 @@
 
     // Update Kalender
     updateKalender();
+
+    // Update Footer
+    updateFooter();
+
+    // Update Social Media
+    updateSocialMedia();
   }
 
   function updateKalender() {
@@ -1498,16 +1491,12 @@
     // Update header kalender
     const kalenderTitle = document.querySelector('.kalender-title');
     const kalenderSubtitle = document.querySelector('.kalender-subtitle');
-    const kalenderDescription = document.querySelector('.kalender-description');
 
     if (kalenderTitle && dataKonten.kalender.judul) {
       kalenderTitle.textContent = dataKonten.kalender.judul;
     }
     if (kalenderSubtitle) {
       kalenderSubtitle.textContent = 'Jadwal Kegiatan HMJ Kedokteran';
-    }
-    if (kalenderDescription && dataKonten.kalender.deskripsi) {
-      kalenderDescription.textContent = dataKonten.kalender.deskripsi;
     }
 
     // Update Google Calendar embed
@@ -1556,6 +1545,9 @@
 
     if (ketuaFoto && dataKonten.pengurus.ketua_umum.foto) {
       ketuaFoto.src = dataKonten.pengurus.ketua_umum.foto;
+      ketuaFoto.onerror = function() {
+        this.src = 'https://via.placeholder.com/160x160/2A6403/FFFFFF?text=PHOTO';
+      };
     }
     if (ketuaNama && dataKonten.pengurus.ketua_umum.nama) {
       ketuaNama.textContent = dataKonten.pengurus.ketua_umum.nama;
@@ -1576,7 +1568,12 @@
           const jabatan = card.querySelector('.pengurus-position');
           const photoCircle = card.querySelector('.photo-circle');
 
-          if (foto && pengurus.foto) foto.src = pengurus.foto;
+          if (foto && pengurus.foto) {
+            foto.src = pengurus.foto;
+            foto.onerror = function() {
+              this.src = 'https://via.placeholder.com/160x160/2A6403/FFFFFF?text=PHOTO';
+            };
+          }
           if (nama) nama.textContent = pengurus.nama;
           if (jabatan) jabatan.textContent = pengurus.jabatan;
           if (photoCircle && pengurus.border_color) {
@@ -1593,9 +1590,8 @@
     const departemenGrid = document.querySelector('.departemen-grid');
     if (!departemenGrid) return;
 
-    const existingCards = departemenGrid.querySelectorAll('.departemen-card, a');
-    existingCards.forEach((element, index) => {
-      const card = element.classList.contains('departemen-card') ? element : element.querySelector('.departemen-card');
+    const existingCards = departemenGrid.querySelectorAll('.departemen-card');
+    existingCards.forEach((card, index) => {
       if (card && dataKonten.departemen[index]) {
         const departemen = dataKonten.departemen[index];
         const icon = card.querySelector('.departemen-icon');
@@ -1606,14 +1602,7 @@
         if (icon) icon.textContent = departemen.icon;
         if (nama) nama.textContent = departemen.nama;
         if (deskripsi) deskripsi.textContent = departemen.deskripsi;
-        
-        if (link) {
-          if (element.tagName === 'A') {
-            element.href = departemen.link;
-          } else {
-            link.href = departemen.link;
-          }
-        }
+        if (link) link.href = departemen.link;
       }
     });
   }
@@ -1649,6 +1638,7 @@
         link.href = dataKonten.social_media.tiktok;
       }
     });
+  }
 
   // Load data when page loads
   document.addEventListener('DOMContentLoaded', loadData);
@@ -1696,7 +1686,5 @@
     observer.observe(el);
   });
 </script>
-
 </html>
-
-
+    }
