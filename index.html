@@ -665,6 +665,7 @@
       background: var(--bg);
     }
 
+
     .departemen-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -674,6 +675,7 @@
       margin-left: auto;
       margin-right: auto;
     }
+
 
     .departemen-card {
       background: white;
@@ -688,6 +690,7 @@
       overflow: hidden;
     }
 
+
     .departemen-card::before {
       content: '';
       position: absolute;
@@ -700,15 +703,18 @@
       transition: all 0.3s ease;
     }
 
+
     .departemen-card:hover {
       transform: translateY(-12px);
       box-shadow: 0 16px 40px rgba(0, 0, 0, 0.15);
       border-top-color: var(--primary);
     }
 
+
     .departemen-card:hover::before {
       opacity: 1;
     }
+
 
     .departemen-icon {
       font-size: 3.5rem;
@@ -723,10 +729,12 @@
       z-index: 2;
     }
 
+
     .departemen-card:hover .departemen-icon {
       transform: scale(1.15) rotate(-5deg);
       color: var(--hero-start);
     }
+
 
     .departemen-name {
       font-size: 1.4rem;
@@ -739,6 +747,7 @@
       letter-spacing: 0.5px;
     }
 
+
     .departemen-description {
       font-size: 0.9rem;
       color: var(--muted);
@@ -748,6 +757,7 @@
       position: relative;
       z-index: 2;
     }
+
 
     .departemen-btn {
       display: inline-block;
@@ -765,6 +775,7 @@
       overflow: hidden;
     }
 
+
     .departemen-btn::before {
       content: '';
       position: absolute;
@@ -778,16 +789,18 @@
       transition: width 0.6s, height 0.6s;
     }
 
+
     .departemen-btn:hover {
       transform: translateY(-2px);
       box-shadow: 0 8px 20px rgba(34, 75, 6, 0.3);
     }
 
+
     .departemen-btn:hover::before {
       width: 300px;
       height: 300px;
     }
-
+    
     /* ===== KALENDER SECTION ===== */
     .kalender-section {
       padding: 100px 0;
@@ -1273,14 +1286,12 @@
           <a href="admin.html" class="departemen-btn">Lihat Detail</a>
         </div>
 
-        <a href="hublu.html" style="text-decoration: none; color: inherit;">
           <div class="departemen-card">
             <div class="departemen-icon">🌍</div>
             <h3 class="departemen-name">Hubungan Luar</h3>
             <p class="departemen-description">Membangun jaringan dengan organisasi eksternal</p>
-            <button class="departemen-btn">Lihat Detail</button>
-          </div>
-        </a>
+          <a href="hublu.html" class="departemen-btn">Lihat Detail</a>
+        </div>
 
         <div class="departemen-card">
           <div class="departemen-icon">💰</div>
